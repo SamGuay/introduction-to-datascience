@@ -1,7 +1,47 @@
-# Version control with GitHub {#GitHub}
+# Tools for Collaborating {#GitHub}
 
-## Overview 
-We will be using version control with GitHub and Git to share our code on group projects. Here is a list of videos you might want to watch to familiarize yourself further with these tools, as well as a cheatsheet of Git and terminal commands.
+## Overview & Learning Objectives
+This chapter covers tools that will help you collaborate effectively with others on software and data analysis projects. 
+This includes 
+[Colaboratory](https://colab.research.google.com/), an online Jupyter notebook server;
+[Git](https://git-scm.com/), a *version control* tool for maintaining, keeping track of, merging, and switching between different versions of code; and
+[GitHub](https://github.com), a hosting service for Git repositories that helps you keep track of bugs, communicate with collaborators, share your project,
+and keep it safely backed up in the cloud. By the end of this chapter, you'll be able to:
+
+- [TODO] colab
+- create a git code repository on GitHub
+- download the repository on your own computer
+- make changes to your code and upload them to GitHub
+- download changes made by others from GitHub
+- revert to an older version of your code
+
+Here is a list of videos you might want to watch to familiarize yourself further with these tools, as well as a cheatsheet of Git and terminal commands.
+
+## Why do we need special tools for this?
+
+Email:
+Drive:
+
+Case in point: almost every major software project these days uses Git (and GitHub, or an equivalent service
+
+## Working Online with Colaboratory
+
+## Version Control with Git
+
+## Hosting your Project with GitHub
+
+issues
+
+
+
+## Additional Resources
+
+- bitbucket
+- gitlab
+- video links
+- more advanced git tutorials
+
+branching, diffs, merging
 
 ## Videos to learn about version control with GitHub and Git
 
