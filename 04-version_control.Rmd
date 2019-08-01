@@ -26,9 +26,18 @@ Case in point: almost every major software project these days uses Git (and GitH
 
 ## Working Online with Colaboratory
 
+Best Practices:
+
 ## Version Control with Git
 
+Best Practices:
+no big files
+check what others have done before you work
+
 ## Hosting your Project with GitHub
+
+
+Best Practices:
 
 issues
 
@@ -40,6 +49,8 @@ issues
 - gitlab
 - video links
 - more advanced git tutorials
+- git is distribution; no one master repository
+- continual integration
 
 branching, diffs, merging
 
