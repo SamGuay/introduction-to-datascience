@@ -10,7 +10,7 @@ and keep it safely backed up in the cloud. By the end of this chapter, you'll be
 
 - [TODO] colab
 - create a git code repository on GitHub
-- download the repository on your own computer
+- download the repository to your own computer
 - make changes to your code and upload them to GitHub
 - download changes made by others from GitHub
 - revert to an older version of your code
@@ -19,26 +19,29 @@ Here is a list of videos you might want to watch to familiarize yourself further
 
 ## Why do we need special tools for this?
 
-Email:
-Drive:
+## Working Online with Colab
 
-Case in point: almost every major software project these days uses Git (and GitHub, or an equivalent service
+what is colab
 
-## Working Online with Colaboratory
+### Creating a Colab 
 
-Best Practices:
+### Reverting a Colab 
 
-## Version Control with Git
+### Best Practices
 
-Best Practices:
+
+## Version Control with Git and GitHub
+
+What is git and github, difference
+
+### Creating a Repository
+
+### Downloading to Your Computer
+
+### Best Practices
+
 no big files
 check what others have done before you work
-
-## Hosting your Project with GitHub
-
-
-Best Practices:
-
 issues
 
 
