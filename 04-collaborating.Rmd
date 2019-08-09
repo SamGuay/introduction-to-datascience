@@ -18,19 +18,28 @@ and keep it safely backed up in the cloud. By the end of this chapter, you'll be
 Here is a list of videos you might want to watch to familiarize yourself further with these tools, as well as a cheatsheet of Git and terminal commands.
 
 ## Why do we need special tools for this?
+When you're working on your own
+
+when you're working with others
+
+What we want from a collaborative tool
 
 ## Working Online with Colab
 
 what is colab
 
-### Creating a Colab 
+### Creating a notebook 
 
-### Reverting a Colab 
+### Sharing a notebook
+
+### Reverting a notebook 
 
 ### Best Practices
 
 
-## Version Control with Git and GitHub
+## Bigger Projects: Version Control with Git and GitHub
+
+can you imagine realtime editing with your whole company? how distracting
 
 What is git and github, difference
 
