@@ -1,30 +1,60 @@
 # Clustering {#clustering}
 
 ## Overview 
-Introduction to clustering using K-means. Will discuss the K-means algorithm, how we choose K (the number of clusters) and other practical considerations (such as scaling).
+This chapter will provide an introduction to clustering using K-means. We will
+discuss the K-means algorithm, how to choose the number of clusters, and other
+practical considerations (such as scaling).
 
 ## Chapter learning objectives 
 By the end of the chapter, students will be able to:
 
-* Describe a case where clustering would be an appropriate tool, and what insight it would bring from the data.
+* Describe a case where clustering would be an appropriate tool, and what insight it provides about data.
 * Explain the K-means clustering algorithm.
 * Interpret the output of a K-means analysis.
-* Perform kmeans clustering in R using `kmeans`.
-* Visualize the output of K-means clustering in R using pair-wise scatter plots.
-* Identify when it is necessary to scale variables before clustering and do this using R.
+* Perform K-means clustering in R using `kmeans`.
+* Visualize the output of K-means clustering in R using coloured scatter plots.
+* Identify when it is necessary to scale variables before clustering, and do this using R.
 * Use the elbow method to choose the number of clusters for K-means.
 * Describe advantages, limitations and assumptions of the K-means clustering algorithm.
 
 ## Clustering
-While at first glance, clustering may seem very similar to classification, these two methods have some very important distinction. Most notably, classification is a supervised method (we use past information to predict the future values/labels for our target/response variable), whereas clustering is considered an unsupervised method (there is no target/response variable and we are looking to find sub-groups/clusters of observations based on how similar they are). So, where classification might be used to label future emails as spam or not spam, clustering might be instead be used to group emails into categories based on their similarity, however we would not have labels for these categories in the case of clustering. Another example problem we might try to solve with clustering is grouping Amazon customers into groups based upon their similar purchasing behaviours. Again here, we do not have, nor need, labels for customer groups.
+While at first glance, clustering may seem very similar to classification,
+these two methods have some very important distinction. Most notably,
+classification is a supervised method (we use past information to predict the
+future values/labels for our target/response variable), whereas clustering is
+considered an unsupervised method (there is no target/response variable and we
+are looking to find sub-groups/clusters of observations based on how similar
+they are). So, where classification might be used to label future emails as
+spam or not spam, clustering might be instead be used to group emails into
+categories based on their similarity, however we would not have labels for
+these categories in the case of clustering. Another example problem we might
+try to solve with clustering is grouping Amazon customers into groups based
+upon their similar purchasing behaviours. Again here, we do not have, nor need,
+labels for customer groups.
 
-Another way to think about it is, that classification is really about predicting something that you might have a scientific question about and/or hypothesis for, whereas, clustering is very often a hypothesis generating process (you identify things that are similar to each other that might be unexpected, and from those observations, you might generate a question and hypothesis that you might follow-up with classification).
+Another way to think about it is, that classification is really about
+predicting something that you might have a scientific question about and/or
+hypothesis for, whereas, clustering is very often a hypothesis generating
+process (you identify things that are similar to each other that might be
+unexpected, and from those observations, you might generate a question and
+hypothesis that you might follow-up with classification).
 
-Another major difference between clustering and classification is in how success is determined. With classification we are able to use a test data set to assess prediction performance, in clustering we must use variance metrics to determine how well our defined clusters fit the data. The two metrics used to determine success are between- and within- variation. Ideally we want clusters where the between-variance is large (so that the clusters are well separated) and the within- variation is small (so that the clusters are composed of close/tight-knit observations).
+Another major difference between clustering and classification is in how
+success is determined. With classification we are able to use a test data set
+to assess prediction performance, in clustering we must use variance metrics to
+determine how well our defined clusters fit the data. The two metrics used to
+determine success are between- and within- variation. Ideally we want clusters
+where the between-variance is large (so that the clusters are well separated)
+and the within- variation is small (so that the clusters are composed of
+close/tight-knit observations).
 
 ### A toy example
 
-What if we had some customer data, and we wanted to learn more about the types of customers we had so that we could come up with better products and/or promotions to increase our business in a data-driven way. For example, let's consider this data below, where we have assessed customer loyalty and customer satisfaction:
+What if we had some customer data, and we wanted to learn more about the types
+of customers we had so that we could come up with better products and/or
+promotions to increase our business in a data-driven way. For example, let's
+consider this data below, where we have assessed customer loyalty and customer
+satisfaction:
 
 ```{r 10-toy-example-data, echo = FALSE, message = FALSE, warning = FALSE}
 library(tidyverse)
@@ -65,7 +95,11 @@ base
 
 data modified from: http://www.segmentationstudyguide.com/using-cluster-analysis-for-market-segmentation/
 
-From this data we might ask whether there are sub-groups within our customers? For example do we have customers with high loyalty and high satisfaction? What about low satisfaction and high loyalty? One way to answer such a question is to apply K-means clustering analysis. When we do such an analysis on this data set we identify 3 customer subgroups within our data set:
+From this data we might ask whether there are sub-groups within our customers?
+For example do we have customers with high loyalty and high satisfaction? What
+about low satisfaction and high loyalty? One way to answer such a question is
+to apply K-means clustering analysis. When we do such an analysis on this data
+set we identify 3 customer subgroups within our data set:
 
 ```{r 10-toy-example-clustering, echo = FALSE, warning = FALSE, fig.height = 4, fig.width = 5}
 ggplot(data, aes(y = loyalty, x = csat, color = cluster)) +
@@ -76,7 +110,11 @@ ggplot(data, aes(y = loyalty, x = csat, color = cluster)) +
   ylim(c(0, 10))
 ```
 
-What are the labels for these groups? We don't really have any, only cluster numbers are output from the clustering algorithm. In a simple case like this, where we can easily visualize the clusters on a scatter plot, we can give labels to these groups after clustering using the positions of the groups on the plot:
+What are the labels for these groups? We don't really have any, only cluster
+numbers are output from the clustering algorithm. In a simple case like this,
+where we can easily visualize the clusters on a scatter plot, we can give
+labels to these groups after clustering using the positions of the groups on
+the plot:
 
 - low loyalty and low satisfaction (<font color="#00BA38">green cluster</font>),
 - high loyalty and low satisfaction (<font color="#F8766D">pink cluster</font>), 
@@ -99,7 +137,11 @@ Let's take a look at the data we plotted above:
 head(marketing_data)
 ```
 
-To peform Kmeans clustering in R, we use the `kmeans` function. It takes at least two arguments, the data frame containing the data you wish to cluster, and K, the number of clusters (here we choose K = 3). Given that the K-means algorithm uses a random start to begin the algorithm, to make this reproducible, we need to set the seed. 
+To peform Kmeans clustering in R, we use the `kmeans` function. It takes at
+least two arguments, the data frame containing the data you wish to cluster,
+and K, the number of clusters (here we choose K = 3). Given that the K-means
+algorithm uses a random start to begin the algorithm, to make this
+reproducible, we need to set the seed. 
 
 ```{r 10-kmeans}
 set.seed(1234)
@@ -107,7 +149,14 @@ marketing_clust <- kmeans(marketing_data, centers = 3)
 marketing_clust
 ```
 
-As you can see above, the clustering object returned has a lot of information about our analysis that we need to explore. Let's take a look at it now. To do this, we will call in help from the `broom` package so that we get the model output back in a tidy data format. Let's first start by getting the cluster identification for each point and plotting that on the scatter plot. To do that we use the augment function. Augment takes in the model and the original data frame, and returns a data frame with the data and the cluster assignments for each point:
+As you can see above, the clustering object returned has a lot of information
+about our analysis that we need to explore. Let's take a look at it now. To do
+this, we will call in help from the `broom` package so that we get the model
+output back in a tidy data format. Let's first start by getting the cluster
+identification for each point and plotting that on the scatter plot. To do that
+we use the augment function. Augment takes in the model and the original data
+frame, and returns a data frame with the data and the cluster assignments for
+each point:
 
 ```{r 10-plot-clusters-1}
 library(broom)
@@ -127,15 +176,33 @@ cluster_plot
 
 ## Choosing K for K-means clustering
 
-As mentioned above, we need to choose a K to perform K-means clustering. How should we choose K? We have no data labels, and so cannot perform cross-validation with some measure of model prediction error, so what can we do? What we can do in this situation is to look at the total within-cluster sum of squares for different K's and choose the K that gives the biggest decrease in the total within-cluster sum of squares. Why total within-cluster sum of squares? This statistic lets us know how close/tight-knit (or compact) observations are within clusters. A larger number means that clusters are not close/tight-knit, but are instead more spread out. A smaller number here means that clusters are indeed close/tight-knit together. 
+As mentioned above, we need to choose a K to perform K-means clustering. How
+should we choose K? We have no data labels, and so cannot perform
+cross-validation with some measure of model prediction error, so what can we
+do? What we can do in this situation is to look at the total within-cluster sum
+of squares for different K's and choose the K that gives the biggest decrease
+in the total within-cluster sum of squares. Why total within-cluster sum of
+squares? This statistic lets us know how close/tight-knit (or compact)
+observations are within clusters. A larger number means that clusters are not
+close/tight-knit, but are instead more spread out. A smaller number here means
+that clusters are indeed close/tight-knit together. 
 
-We can get at the total within-cluster sum of squares (`tot.withinss`) from our clustering using `broom`'s `glance` function (it gives model-level statistics). For example:
+We can get at the total within-cluster sum of squares (`tot.withinss`) from our
+clustering using `broom`'s `glance` function (it gives model-level statistics).
+For example:
 
 ```{r 10-glance}
 glance(marketing_clust)
 ```
 
-Let's calculate the total within-cluster sum of squares for our data for a variety of K's (say 1 - 9) and then plot them against K. To do this we will create a data frame with a column named `k`, for each of the K's we want to try our clustering with. Then we use `map` to apply the `kmeans` function to each K. We also use `map` to then apply `glance` to each of the clustering models we performed (one for each K). In the end we end up with a complex data frame with 3 columns, one for K, one for the models, and one for the model statistics (output of `glance`, which is a data frame):
+Let's calculate the total within-cluster sum of squares for our data for a
+variety of K's (say 1 - 9) and then plot them against K. To do this we will
+create a data frame with a column named `k`, for each of the K's we want to try
+our clustering with. Then we use `map` to apply the `kmeans` function to each
+K. We also use `map` to then apply `glance` to each of the clustering models we
+performed (one for each K). In the end we end up with a complex data frame with
+3 columns, one for K, one for the models, and one for the model statistics
+(output of `glance`, which is a data frame):
 
 ```{r 10-choose-k, fig.height = 4, fig.width = 4.35}
 marketing_clust_ks <- tibble(k = 1:9) %>%
@@ -144,7 +211,10 @@ marketing_clust_ks <- tibble(k = 1:9) %>%
 head(marketing_clust_ks)
 ```
 
-What we need to do next, is get the value for the total within-cluster sum of squares (`tot.withinss`) from the `glanced` column. Given that each item in this column is a data frame, we will need to use the `unnest` function to unpack the data frames in the `glanced` column. 
+What we need to do next, is get the value for the total within-cluster sum of
+squares (`tot.withinss`) from the `glanced` column. Given that each item in
+this column is a data frame, we will need to use the `unnest` function to
+unpack the data frames in the `glanced` column. 
 
 ```{r 10-get-total-within-sumsqs}
 clustering_statistics <- marketing_clust_ks %>%
@@ -164,7 +234,10 @@ elbow_plot <- ggplot(clustering_statistics, aes(x = k, y = tot.withinss)) +
 elbow_plot
 ```
 
-We call the plot above an "elbow plot" and we look for the "elbow" in total within-cluster sum of squares, the point where afterwards increasing K doesn't have as much impact reducing the total within-cluster sum of squares. Here we would choose K = 3. 
+We call the plot above an "elbow plot" and we look for the "elbow" in total
+within-cluster sum of squares, the point where afterwards increasing K doesn't
+have as much impact reducing the total within-cluster sum of squares. Here we
+would choose K = 3. 
 
 ## Additional readings:
 
