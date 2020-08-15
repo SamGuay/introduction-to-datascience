@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Introduction to Data Science" />
+<meta property="og:title" content="Chapter 5 Introduction to Data Science | Introduction to Data Science" />
 <meta property="og:type" content="book" />
 
 
@@ -15,9 +15,9 @@
 
 
 
-<meta name="description" content="Introduction to Data Science">
+<meta name="description" content="Chapter 5 Introduction to Data Science | Introduction to Data Science">
 
-<title>Introduction to Data Science</title>
+<title>Chapter 5 Introduction to Data Science | Introduction to Data Science</title>
 
 <script src="libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -208,13 +208,10 @@ img {
 </div>
 <div class="row">
 <div class="col-sm-12">
-<div id="header">
-<h1 class="title">Introduction to Data Science</h1>
-</div>
-<div id="introduction-to-data-science" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction to Data Science</h1>
-<div id="loading-a-spreadsheet-like-dataset" class="section level2">
-<h2><span class="header-section-number">1.1</span> Loading a spreadsheet-like dataset</h2>
+<div id="introduction-to-data-science-1" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Introduction to Data Science</h1>
+<div id="loading-a-spreadsheet-like-dataset-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Loading a spreadsheet-like dataset</h2>
 <p>Often, the first thing we need to do in data analysis is to load a dataset into R. When we bring spreadsheet-like (think Microsoft Excel tables) data, generally shaped like a rectangle, into R it is represented as what we call a <em>data frame</em> object. It is very similar to a spreadsheet where the rows are the collected observations and the columns are the variables.</p>
 <p><img src="img/spreadsheet_vs_dataframe.PNG" width="850"/></p>
 <p>The first kind of data we will learn how to load into R (as a data frame) is the
@@ -261,7 +258,7 @@ var bootstrapThebe = function() {
 }
 document.querySelector("#activateButton").addEventListener('click', bootstrapThebe)
 </script>
-<div class="sourceCode" id="cb2" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb135" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="introduction-to-data-science-1.html#cb135-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   state = col_character(),
@@ -271,9 +268,9 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ##   mean_commute_minutes = col_double(),
 ##   party = col_character()
 ## )</code></pre>
-<div class="sourceCode" id="cb4" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb5" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="index.html#cb5-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb5-2"><a href="index.html#cb5-2"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb137" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="introduction-to-data-science-1.html#cb137-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb138" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="introduction-to-data-science-1.html#cb138-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb138-2"><a href="introduction-to-data-science-1.html#cb138-2"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   state = col_character(),
@@ -308,7 +305,7 @@ This has several benefits that we’ll discuss in further detail later in the co
 </div>
 </div>
 <p style="text-align: center;">
-<a href="reading.html"><button class="btn btn-default">Next</button></a>
+<a href="viz.html"><button class="btn btn-default">Previous</button></a>
 </p>
 </div>
 </div>

@@ -2,47 +2,11 @@
 <html lang="" xml:lang="">
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Cleaning and wrangling data | Introduction to Data Science</title>
-  <meta name="description" content="This is an open source textbook for teaching introductory data science." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 3 Cleaning and wrangling data | Introduction to Data Science" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="This is an open source textbook for teaching introductory data science." />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Cleaning and wrangling data | Introduction to Data Science" />
-  
-  <meta name="twitter:description" content="This is an open source textbook for teaching introductory data science." />
-  
-
-<meta name="author" content="Tiffany-Anne Timbers" />
-<meta name="author" content="Trevor Campbell" />
-<meta name="author" content="Melissa Lee" />
-
-
-<meta name="date" content="2020-08-14" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="reading.html"/>
-<link rel="next" href="viz.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Chapter 3 Cleaning and wrangling data | Introduction to Data Science" />
+<meta property="og:type" content="book" />
 
 
 
@@ -51,16 +15,28 @@
 
 
 
+<meta name="description" content="Chapter 3 Cleaning and wrangling data | Introduction to Data Science">
 
+<title>Chapter 3 Cleaning and wrangling data | Introduction to Data Science</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -119,130 +95,119 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
 </head>
 
 <body>
 
+<div class="container-fluid main-container">
 
 
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Introduction to Data Science</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data Science</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#jupyter-notebooks"><i class="fa fa-check"></i><b>1.2</b> Jupyter notebooks</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#loading-a-spreadsheet-like-dataset"><i class="fa fa-check"></i><b>1.3</b> Loading a spreadsheet-like dataset</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assigning-value-to-a-data-frame"><i class="fa fa-check"></i><b>1.4</b> Assigning value to a data frame</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#creating-subsets-of-data-frames-with-select-filter"><i class="fa fa-check"></i><b>1.5</b> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></a><ul>
-<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#using-select-to-extract-multiple-columns"><i class="fa fa-check"></i><b>1.5.1</b> Using <code>select</code> to extract multiple columns</a></li>
-<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#using-select-to-extract-a-range-of-columns"><i class="fa fa-check"></i><b>1.5.2</b> Using <code>select</code> to extract a range of columns</a></li>
-<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#using-filter-to-extract-a-single-row"><i class="fa fa-check"></i><b>1.5.3</b> Using <code>filter</code> to extract a single row</a></li>
-<li class="chapter" data-level="1.5.4" data-path="index.html"><a href="index.html#using-filter-to-extract-rows-with-values-above-a-threshold"><i class="fa fa-check"></i><b>1.5.4</b> Using <code>filter</code> to extract rows with values above a threshold</a></li>
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li class="has-sub"><a href="index.html#introduction-to-data-science"><span class="toc-section-number">1</span> Introduction to Data Science</a><ul>
+<li><a href="index.html#loading-a-spreadsheet-like-dataset"><span class="toc-section-number">1.1</span> Loading a spreadsheet-like dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#exploring-data-with-visualizations"><i class="fa fa-check"></i><b>1.6</b> Exploring data with visualizations</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot"><i class="fa fa-check"></i><b>1.6.1</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot-1"><i class="fa fa-check"></i><b>1.6.2</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#formatting-ggplot-objects"><i class="fa fa-check"></i><b>1.6.3</b> Formatting ggplot objects</a></li>
-<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#coloring-points-by-group"><i class="fa fa-check"></i><b>1.6.4</b> Coloring points by group</a></li>
-<li class="chapter" data-level="1.6.5" data-path="index.html"><a href="index.html#putting-it-all-together"><i class="fa fa-check"></i><b>1.6.5</b> Putting it all together</a></li>
-<li class="chapter" data-level="1.6.6" data-path="index.html"><a href="index.html#whats-next"><i class="fa fa-check"></i><b>1.6.6</b> What’s next?</a></li>
+<li class="has-sub"><a href="reading.html#reading"><span class="toc-section-number">2</span> Reading in data locally and from the web</a><ul>
+<li><a href="reading.html#overview"><span class="toc-section-number">2.1</span> Overview</a></li>
+<li><a href="reading.html#chapter-learning-objectives"><span class="toc-section-number">2.2</span> Chapter learning objectives</a></li>
+<li><a href="reading.html#absolute-and-relative-file-paths"><span class="toc-section-number">2.3</span> Absolute and relative file paths</a></li>
+<li class="has-sub"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><span class="toc-section-number">2.4</span> Reading tabular data from a plain text file into R</a><ul>
+<li><a href="reading.html#skipping-rows-when-reading-in-data"><span class="toc-section-number">2.4.1</span> Skipping rows when reading in data</a></li>
+<li><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><span class="toc-section-number">2.4.2</span> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
+<li><a href="reading.html#reading-tabular-data-directly-from-a-url"><span class="toc-section-number">2.4.3</span> Reading tabular data directly from a URL</a></li>
+<li><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><span class="toc-section-number">2.4.4</span> Previewing a data file before reading it into R</a></li>
 </ul></li>
+<li><a href="reading.html#reading-data-from-an-microsoft-excel-file"><span class="toc-section-number">2.5</span> Reading data from an Microsoft Excel file</a></li>
+<li class="has-sub"><a href="reading.html#reading-data-from-a-database"><span class="toc-section-number">2.6</span> Reading data from a database</a><ul>
+<li><a href="reading.html#reading-data-from-a-sqlite-database"><span class="toc-section-number">2.6.1</span> Reading data from a SQLite database</a></li>
+<li><a href="reading.html#reading-data-from-a-postgresql-database"><span class="toc-section-number">2.6.2</span> Reading data from a PostgreSQL database</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="reading.html"><a href="reading.html"><i class="fa fa-check"></i><b>2</b> Reading in data locally and from the web</a><ul>
-<li class="chapter" data-level="2.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
-<li class="chapter" data-level="2.2" data-path="reading.html"><a href="reading.html#chapter-learning-objectives-1"><i class="fa fa-check"></i><b>2.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="2.3" data-path="reading.html"><a href="reading.html#absolute-and-relative-file-paths"><i class="fa fa-check"></i><b>2.3</b> Absolute and relative file paths</a></li>
-<li class="chapter" data-level="2.4" data-path="reading.html"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><i class="fa fa-check"></i><b>2.4</b> Reading tabular data from a plain text file into R</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="reading.html"><a href="reading.html#skipping-rows-when-reading-in-data"><i class="fa fa-check"></i><b>2.4.1</b> Skipping rows when reading in data</a></li>
-<li class="chapter" data-level="2.4.2" data-path="reading.html"><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><i class="fa fa-check"></i><b>2.4.2</b> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
-<li class="chapter" data-level="2.4.3" data-path="reading.html"><a href="reading.html#reading-tabular-data-directly-from-a-url"><i class="fa fa-check"></i><b>2.4.3</b> Reading tabular data directly from a URL</a></li>
-<li class="chapter" data-level="2.4.4" data-path="reading.html"><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><i class="fa fa-check"></i><b>2.4.4</b> Previewing a data file before reading it into R</a></li>
+<li><a href="reading.html#writing-data-from-r-to-a-.csv-file"><span class="toc-section-number">2.7</span> Writing data from R to a <code>.csv</code> file</a></li>
+<li class="has-sub"><a href="reading.html#scraping-data-off-the-web-using-r"><span class="toc-section-number">2.8</span> Scraping data off the web using R</a><ul>
+<li><a href="reading.html#html-and-css-selectors"><span class="toc-section-number">2.8.1</span> HTML and CSS selectors</a></li>
+<li><a href="reading.html#are-you-allowed-to-scrape-that-website"><span class="toc-section-number">2.8.2</span> Are you allowed to scrape that website?</a></li>
+<li><a href="reading.html#using-rvest"><span class="toc-section-number">2.8.3</span> Using <code>rvest</code></a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="reading.html"><a href="reading.html#reading-data-from-an-microsoft-excel-file"><i class="fa fa-check"></i><b>2.5</b> Reading data from an Microsoft Excel file</a></li>
-<li class="chapter" data-level="2.6" data-path="reading.html"><a href="reading.html#reading-data-from-a-database"><i class="fa fa-check"></i><b>2.6</b> Reading data from a database</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="reading.html"><a href="reading.html#reading-data-from-a-sqlite-database"><i class="fa fa-check"></i><b>2.6.1</b> Reading data from a SQLite database</a></li>
-<li class="chapter" data-level="2.6.2" data-path="reading.html"><a href="reading.html#reading-data-from-a-postgresql-database"><i class="fa fa-check"></i><b>2.6.2</b> Reading data from a PostgreSQL database</a></li>
+<li><a href="reading.html#additional-readingsresources"><span class="toc-section-number">2.9</span> Additional readings/resources</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="reading.html"><a href="reading.html#writing-data-from-r-to-a-.csv-file"><i class="fa fa-check"></i><b>2.7</b> Writing data from R to a <code>.csv</code> file</a></li>
-<li class="chapter" data-level="2.8" data-path="reading.html"><a href="reading.html#scraping-data-off-the-web-using-r"><i class="fa fa-check"></i><b>2.8</b> Scraping data off the web using R</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="reading.html"><a href="reading.html#html-and-css-selectors"><i class="fa fa-check"></i><b>2.8.1</b> HTML and CSS selectors</a></li>
-<li class="chapter" data-level="2.8.2" data-path="reading.html"><a href="reading.html#are-you-allowed-to-scrape-that-website"><i class="fa fa-check"></i><b>2.8.2</b> Are you allowed to scrape that website?</a></li>
-<li class="chapter" data-level="2.8.3" data-path="reading.html"><a href="reading.html#using-rvest"><i class="fa fa-check"></i><b>2.8.3</b> Using <code>rvest</code></a></li>
+<li class="has-sub"><a href="wrangling.html#wrangling"><span class="toc-section-number">3</span> Cleaning and wrangling data</a><ul>
+<li><a href="wrangling.html#overview-1"><span class="toc-section-number">3.1</span> Overview</a></li>
+<li><a href="wrangling.html#chapter-learning-objectives-1"><span class="toc-section-number">3.2</span> Chapter learning objectives</a></li>
+<li class="has-sub"><a href="wrangling.html#vectors-and-data-frames"><span class="toc-section-number">3.3</span> Vectors and Data frames</a><ul>
+<li><a href="wrangling.html#what-is-a-data-frame"><span class="toc-section-number">3.3.1</span> What is a data frame?</a></li>
+<li><a href="wrangling.html#what-is-a-vector"><span class="toc-section-number">3.3.2</span> What is a vector?</a></li>
+<li><a href="wrangling.html#how-are-vectors-different-from-a-list"><span class="toc-section-number">3.3.3</span> How are vectors different from a list?</a></li>
+<li><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><span class="toc-section-number">3.3.4</span> What does this have to do with data frames?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="reading.html"><a href="reading.html#additional-readingsresources"><i class="fa fa-check"></i><b>2.9</b> Additional readings/resources</a></li>
+<li class="has-sub"><a href="wrangling.html#tidy-data"><span class="toc-section-number">3.4</span> Tidy Data</a><ul>
+<li><a href="wrangling.html#what-is-tidy-data"><span class="toc-section-number">3.4.1</span> What is tidy data?</a></li>
+<li><a href="wrangling.html#why-is-tidy-data-important-in-r"><span class="toc-section-number">3.4.2</span> Why is tidy data important in R?</a></li>
+<li><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><span class="toc-section-number">3.4.3</span> Going from wide to long (or tidy!) using <code>gather</code></a></li>
+<li><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><span class="toc-section-number">3.4.4</span> Using separate to deal with multiple delimiters</a></li>
+<li><a href="wrangling.html#notes-on-defining-tidy-data"><span class="toc-section-number">3.4.5</span> Notes on defining tidy data</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="wrangling.html"><a href="wrangling.html"><i class="fa fa-check"></i><b>3</b> Cleaning and wrangling data</a><ul>
-<li class="chapter" data-level="3.1" data-path="wrangling.html"><a href="wrangling.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
-<li class="chapter" data-level="3.2" data-path="wrangling.html"><a href="wrangling.html#chapter-learning-objectives-2"><i class="fa fa-check"></i><b>3.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="3.3" data-path="wrangling.html"><a href="wrangling.html#vectors-and-data-frames"><i class="fa fa-check"></i><b>3.3</b> Vectors and Data frames</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="wrangling.html"><a href="wrangling.html#what-is-a-data-frame"><i class="fa fa-check"></i><b>3.3.1</b> What is a data frame?</a></li>
-<li class="chapter" data-level="3.3.2" data-path="wrangling.html"><a href="wrangling.html#what-is-a-vector"><i class="fa fa-check"></i><b>3.3.2</b> What is a vector?</a></li>
-<li class="chapter" data-level="3.3.3" data-path="wrangling.html"><a href="wrangling.html#how-are-vectors-different-from-a-list"><i class="fa fa-check"></i><b>3.3.3</b> How are vectors different from a list?</a></li>
-<li class="chapter" data-level="3.3.4" data-path="wrangling.html"><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><i class="fa fa-check"></i><b>3.3.4</b> What does this have to do with data frames?</a></li>
+<li class="has-sub"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><span class="toc-section-number">3.5</span> Combining functions using the pipe operator, <code>%&gt;%</code>:</a><ul>
+<li><a href="wrangling.html#using-to-combine-filter-and-select"><span class="toc-section-number">3.5.1</span> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
+<li><a href="wrangling.html#using-with-more-than-two-functions"><span class="toc-section-number">3.5.2</span> Using <code>%&gt;%</code> with more than two functions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="wrangling.html"><a href="wrangling.html#tidy-data"><i class="fa fa-check"></i><b>3.4</b> Tidy Data</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="wrangling.html"><a href="wrangling.html#what-is-tidy-data"><i class="fa fa-check"></i><b>3.4.1</b> What is tidy data?</a></li>
-<li class="chapter" data-level="3.4.2" data-path="wrangling.html"><a href="wrangling.html#why-is-tidy-data-important-in-r"><i class="fa fa-check"></i><b>3.4.2</b> Why is tidy data important in R?</a></li>
-<li class="chapter" data-level="3.4.3" data-path="wrangling.html"><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><i class="fa fa-check"></i><b>3.4.3</b> Going from wide to long (or tidy!) using <code>gather</code></a></li>
-<li class="chapter" data-level="3.4.4" data-path="wrangling.html"><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><i class="fa fa-check"></i><b>3.4.4</b> Using separate to deal with multiple delimiters</a></li>
-<li class="chapter" data-level="3.4.5" data-path="wrangling.html"><a href="wrangling.html#notes-on-defining-tidy-data"><i class="fa fa-check"></i><b>3.4.5</b> Notes on defining tidy data</a></li>
+<li class="has-sub"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><span class="toc-section-number">3.6</span> Iterating over data with <code>group_by</code> + <code>summarize</code></a><ul>
+<li><a href="wrangling.html#calculating-summary-statistics"><span class="toc-section-number">3.6.1</span> Calculating summary statistics:</a></li>
+<li><a href="wrangling.html#calculating-group-summary-statistics"><span class="toc-section-number">3.6.2</span> Calculating group summary statistics:</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="wrangling.html"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><i class="fa fa-check"></i><b>3.5</b> Combining functions using the pipe operator, <code>%&gt;%</code>:</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="wrangling.html"><a href="wrangling.html#using-to-combine-filter-and-select"><i class="fa fa-check"></i><b>3.5.1</b> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
-<li class="chapter" data-level="3.5.2" data-path="wrangling.html"><a href="wrangling.html#using-with-more-than-two-functions"><i class="fa fa-check"></i><b>3.5.2</b> Using <code>%&gt;%</code> with more than two functions</a></li>
+<li><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><span class="toc-section-number">3.7</span> Additional reading on the <code>dplyr</code> functions</a></li>
+<li class="has-sub"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><span class="toc-section-number">3.8</span> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a><ul>
+<li><a href="wrangling.html#a-bit-more-about-the-map_-functions"><span class="toc-section-number">3.8.1</span> A bit more about the <code>map_*</code> functions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="wrangling.html"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><i class="fa fa-check"></i><b>3.6</b> Iterating over data with <code>group_by</code> + <code>summarize</code></a><ul>
-<li class="chapter" data-level="3.6.1" data-path="wrangling.html"><a href="wrangling.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>3.6.1</b> Calculating summary statistics:</a></li>
-<li class="chapter" data-level="3.6.2" data-path="wrangling.html"><a href="wrangling.html#calculating-group-summary-statistics"><i class="fa fa-check"></i><b>3.6.2</b> Calculating group summary statistics:</a></li>
+<li><a href="wrangling.html#additional-readingsresources-1"><span class="toc-section-number">3.9</span> Additional readings/resources</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="wrangling.html"><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><i class="fa fa-check"></i><b>3.7</b> Additional reading on the <code>dplyr</code> functions</a></li>
-<li class="chapter" data-level="3.8" data-path="wrangling.html"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><i class="fa fa-check"></i><b>3.8</b> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="wrangling.html"><a href="wrangling.html#a-bit-more-about-the-map_-functions"><i class="fa fa-check"></i><b>3.8.1</b> A bit more about the <code>map_*</code> functions</a></li>
+<li class="has-sub"><a href="viz.html#viz"><span class="toc-section-number">4</span> Effective data visualization</a><ul>
+<li><a href="viz.html#overview-2"><span class="toc-section-number">4.1</span> Overview</a></li>
+<li><a href="viz.html#chapter-learning-objectives-2"><span class="toc-section-number">4.2</span> Chapter learning objectives</a></li>
+<li><a href="viz.html#choosing-the-visualization"><span class="toc-section-number">4.3</span> Choosing the visualization</a></li>
+<li><a href="viz.html#refining-the-visualization"><span class="toc-section-number">4.4</span> Refining the visualization</a></li>
+<li class="has-sub"><a href="viz.html#creating-visualizations-with-ggplot2"><span class="toc-section-number">4.5</span> Creating visualizations with <code>ggplot2</code></a><ul>
+<li><a href="viz.html#the-mauna-loa-co2-data-set"><span class="toc-section-number">4.5.1</span> The Mauna Loa CO2 data set</a></li>
+<li><a href="viz.html#the-island-landmass-data-set"><span class="toc-section-number">4.5.2</span> The island landmass data set</a></li>
+<li><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><span class="toc-section-number">4.5.3</span> The Old Faithful eruption / waiting time data set</a></li>
+<li><a href="viz.html#the-michelson-speed-of-light-data-set"><span class="toc-section-number">4.5.4</span> The Michelson speed of light data set</a></li>
 </ul></li>
-<li class="chapter" data-level="3.9" data-path="wrangling.html"><a href="wrangling.html#additional-readingsresources-1"><i class="fa fa-check"></i><b>3.9</b> Additional readings/resources</a></li>
+<li><a href="viz.html#explaining-the-visualization"><span class="toc-section-number">4.6</span> Explaining the visualization</a></li>
+<li><a href="viz.html#saving-the-visualization"><span class="toc-section-number">4.7</span> Saving the visualization</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="viz.html"><a href="viz.html"><i class="fa fa-check"></i><b>4</b> Effective data visualization</a><ul>
-<li class="chapter" data-level="4.1" data-path="viz.html"><a href="viz.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
-<li class="chapter" data-level="4.2" data-path="viz.html"><a href="viz.html#chapter-learning-objectives-3"><i class="fa fa-check"></i><b>4.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="4.3" data-path="viz.html"><a href="viz.html#choosing-the-visualization"><i class="fa fa-check"></i><b>4.3</b> Choosing the visualization</a></li>
-<li class="chapter" data-level="4.4" data-path="viz.html"><a href="viz.html#refining-the-visualization"><i class="fa fa-check"></i><b>4.4</b> Refining the visualization</a></li>
-<li class="chapter" data-level="4.5" data-path="viz.html"><a href="viz.html#creating-visualizations-with-ggplot2"><i class="fa fa-check"></i><b>4.5</b> Creating visualizations with <code>ggplot2</code></a><ul>
-<li class="chapter" data-level="4.5.1" data-path="viz.html"><a href="viz.html#the-mauna-loa-co2-data-set"><i class="fa fa-check"></i><b>4.5.1</b> The Mauna Loa CO2 data set</a></li>
-<li class="chapter" data-level="4.5.2" data-path="viz.html"><a href="viz.html#the-island-landmass-data-set"><i class="fa fa-check"></i><b>4.5.2</b> The island landmass data set</a></li>
-<li class="chapter" data-level="4.5.3" data-path="viz.html"><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><i class="fa fa-check"></i><b>4.5.3</b> The Old Faithful eruption / waiting time data set</a></li>
-<li class="chapter" data-level="4.5.4" data-path="viz.html"><a href="viz.html#the-michelson-speed-of-light-data-set"><i class="fa fa-check"></i><b>4.5.4</b> The Michelson speed of light data set</a></li>
+<li class="has-sub"><a href="introduction-to-data-science-1.html#introduction-to-data-science-1"><span class="toc-section-number">5</span> Introduction to Data Science</a><ul>
+<li><a href="introduction-to-data-science-1.html#loading-a-spreadsheet-like-dataset-1"><span class="toc-section-number">5.1</span> Loading a spreadsheet-like dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="viz.html"><a href="viz.html#explaining-the-visualization"><i class="fa fa-check"></i><b>4.6</b> Explaining the visualization</a></li>
-<li class="chapter" data-level="4.7" data-path="viz.html"><a href="viz.html#saving-the-visualization"><i class="fa fa-check"></i><b>4.7</b> Saving the visualization</a></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
-
-      </nav>
-    </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Data Science</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
 <div id="wrangling" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Cleaning and wrangling data</h1>
 <div id="overview-1" class="section level2">
@@ -250,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This chapter will be centered around tools for cleaning and wrangling data that move data from its raw format into a format that is suitable for data analysis. They
 will be presented in the context of a real world data science application, providing more practice working through a whole case study.</p>
 </div>
-<div id="chapter-learning-objectives-2" class="section level2">
+<div id="chapter-learning-objectives-1" class="section level2">
 <h2><span class="header-section-number">3.2</span> Chapter learning objectives</h2>
 <p>By the end of the chapter, students will be able to:</p>
 <ul>
@@ -339,9 +304,9 @@ project, it is well worth spending the time to get your data into a tidy format 
 <h3><span class="header-section-number">3.4.3</span> Going from wide to long (or tidy!) using <code>gather</code></h3>
 <p>One common thing that often has to be done to get data into a tidy format is to combine columns that are really part the same variable but currently stored in separate columns. To do this we can use the function <code>gather</code>. <code>gather</code> acts to combine columns, and thus makes the data frame narrower.</p>
 <p>Data is often stored in a wider, not tidy, format because this format is often more intuitive for human readability and understanding, and humans create data sets. An example of this is shown below:</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="wrangling.html#cb94-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb94-2"><a href="wrangling.html#cb94-2"></a>hist_vote_wide &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/historical_vote_wide.csv&quot;</span>)</span>
-<span id="cb94-3"><a href="wrangling.html#cb94-3"></a>hist_vote_wide</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="wrangling.html#cb68-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb68-2"><a href="wrangling.html#cb68-2"></a>hist_vote_wide &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/historical_vote_wide.csv&quot;</span>)</span>
+<span id="cb68-3"><a href="wrangling.html#cb68-3"></a>hist_vote_wide</span></code></pre></div>
 <pre><code>## # A tibble: 10 x 3
 ##    election_year winner        runnerup       
 ##            &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;          
@@ -365,11 +330,11 @@ project, it is well worth spending the time to get your data into a tidy format 
 </ol>
 <p>For the above example, we use gather to combine the winner and runnerup columns into a single column called candidate, and create a column called
 result that contains the outcome of the election for each candidate:</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="wrangling.html#cb96-1"></a>hist_vote_tidy &lt;-<span class="st"> </span><span class="kw">gather</span>(hist_vote_wide, </span>
-<span id="cb96-2"><a href="wrangling.html#cb96-2"></a>                         <span class="dt">key =</span> result, </span>
-<span id="cb96-3"><a href="wrangling.html#cb96-3"></a>                         <span class="dt">value =</span> candidate, </span>
-<span id="cb96-4"><a href="wrangling.html#cb96-4"></a>                         winner, runnerup)</span>
-<span id="cb96-5"><a href="wrangling.html#cb96-5"></a>hist_vote_tidy</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="wrangling.html#cb70-1"></a>hist_vote_tidy &lt;-<span class="st"> </span><span class="kw">gather</span>(hist_vote_wide, </span>
+<span id="cb70-2"><a href="wrangling.html#cb70-2"></a>                         <span class="dt">key =</span> result, </span>
+<span id="cb70-3"><a href="wrangling.html#cb70-3"></a>                         <span class="dt">value =</span> candidate, </span>
+<span id="cb70-4"><a href="wrangling.html#cb70-4"></a>                         winner, runnerup)</span>
+<span id="cb70-5"><a href="wrangling.html#cb70-5"></a>hist_vote_tidy</span></code></pre></div>
 <pre><code>## # A tibble: 20 x 3
 ##    election_year result   candidate      
 ##            &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;          
@@ -412,8 +377,8 @@ result that contains the outcome of the election for each candidate:</p>
 previous untidiness we addressed in the earlier version of this data set, the one we show below is even messier:
 the winner and runnerup columns contain both the candidate’s name as well as their political party. To make this
 messy data tidy we’ll have to fix both of these issues.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="wrangling.html#cb98-1"></a>hist_vote_party &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/historical_vote_messy.csv&quot;</span>)</span>
-<span id="cb98-2"><a href="wrangling.html#cb98-2"></a>hist_vote_party</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="wrangling.html#cb72-1"></a>hist_vote_party &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/historical_vote_messy.csv&quot;</span>)</span>
+<span id="cb72-2"><a href="wrangling.html#cb72-2"></a>hist_vote_party</span></code></pre></div>
 <pre><code>## # A tibble: 10 x 3
 ##    election_year winner             runnerup           
 ##            &lt;dbl&gt; &lt;chr&gt;              &lt;chr&gt;              
@@ -428,11 +393,11 @@ messy data tidy we’ll have to fix both of these issues.</p>
 ##  9          1984 Ronald Reagan/Rep  Walter Mondale/Dem 
 ## 10          1980 Ronald Reagan/Rep  Jimmy Carter/Dem</code></pre>
 <p>First we’ll use <code>gather</code> to create the result and candidate columns, as we did previously:</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="wrangling.html#cb100-1"></a>hist_vote_party_gathered &lt;-<span class="st"> </span><span class="kw">gather</span>(hist_vote_party, </span>
-<span id="cb100-2"><a href="wrangling.html#cb100-2"></a>                          <span class="dt">key =</span> result, </span>
-<span id="cb100-3"><a href="wrangling.html#cb100-3"></a>                          <span class="dt">value =</span> candidate, </span>
-<span id="cb100-4"><a href="wrangling.html#cb100-4"></a>                          winner, runnerup)</span>
-<span id="cb100-5"><a href="wrangling.html#cb100-5"></a>hist_vote_party_gathered</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="wrangling.html#cb74-1"></a>hist_vote_party_gathered &lt;-<span class="st"> </span><span class="kw">gather</span>(hist_vote_party, </span>
+<span id="cb74-2"><a href="wrangling.html#cb74-2"></a>                          <span class="dt">key =</span> result, </span>
+<span id="cb74-3"><a href="wrangling.html#cb74-3"></a>                          <span class="dt">value =</span> candidate, </span>
+<span id="cb74-4"><a href="wrangling.html#cb74-4"></a>                          winner, runnerup)</span>
+<span id="cb74-5"><a href="wrangling.html#cb74-5"></a>hist_vote_party_gathered</span></code></pre></div>
 <pre><code>## # A tibble: 20 x 3
 ##    election_year result   candidate          
 ##            &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;              
@@ -459,11 +424,11 @@ messy data tidy we’ll have to fix both of these issues.</p>
 <p>Then we’ll use <code>separate</code> to split the candidate column into two columns, one that
 contains only the candidate’s name (“candidate”), and one that contains a short identifier for which
 political party the candidate belonged to (“party”):</p>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="wrangling.html#cb102-1"></a>hist_vote_party_tidy &lt;-<span class="st"> </span><span class="kw">separate</span>(hist_vote_party_gathered,</span>
-<span id="cb102-2"><a href="wrangling.html#cb102-2"></a>                                 <span class="dt">col =</span> candidate, </span>
-<span id="cb102-3"><a href="wrangling.html#cb102-3"></a>                                 <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;candidate&quot;</span>, <span class="st">&quot;party&quot;</span>), </span>
-<span id="cb102-4"><a href="wrangling.html#cb102-4"></a>                                 <span class="dt">sep =</span> <span class="st">&quot;/&quot;</span>) </span>
-<span id="cb102-5"><a href="wrangling.html#cb102-5"></a>hist_vote_party_tidy</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="wrangling.html#cb76-1"></a>hist_vote_party_tidy &lt;-<span class="st"> </span><span class="kw">separate</span>(hist_vote_party_gathered,</span>
+<span id="cb76-2"><a href="wrangling.html#cb76-2"></a>                                 <span class="dt">col =</span> candidate, </span>
+<span id="cb76-3"><a href="wrangling.html#cb76-3"></a>                                 <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;candidate&quot;</span>, <span class="st">&quot;party&quot;</span>), </span>
+<span id="cb76-4"><a href="wrangling.html#cb76-4"></a>                                 <span class="dt">sep =</span> <span class="st">&quot;/&quot;</span>) </span>
+<span id="cb76-5"><a href="wrangling.html#cb76-5"></a>hist_vote_party_tidy</span></code></pre></div>
 <pre><code>## # A tibble: 20 x 4
 ##    election_year result   candidate       party
 ##            &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;           &lt;chr&gt;
@@ -495,12 +460,12 @@ political party the candidate belonged to (“party”):</p>
 </ul>
 <p>We can see that this data now satifies all 3 criteria, making it easier to analyze.
 For example, we could visualize the number of winning candidates for each party over this time span:</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="wrangling.html#cb104-1"></a><span class="kw">ggplot</span>(hist_vote_party_tidy, <span class="kw">aes</span>(<span class="dt">x =</span> result, <span class="dt">fill =</span> party)) <span class="op">+</span></span>
-<span id="cb104-2"><a href="wrangling.html#cb104-2"></a><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
-<span id="cb104-3"><a href="wrangling.html#cb104-3"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>)) <span class="op">+</span></span>
-<span id="cb104-4"><a href="wrangling.html#cb104-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;US Presidential election result&quot;</span>) <span class="op">+</span></span>
-<span id="cb104-5"><a href="wrangling.html#cb104-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Number of US Presidential candidates&quot;</span>) <span class="op">+</span></span>
-<span id="cb104-6"><a href="wrangling.html#cb104-6"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;US Presidential candidates (1980 - 2016)&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="wrangling.html#cb78-1"></a><span class="kw">ggplot</span>(hist_vote_party_tidy, <span class="kw">aes</span>(<span class="dt">x =</span> result, <span class="dt">fill =</span> party)) <span class="op">+</span></span>
+<span id="cb78-2"><a href="wrangling.html#cb78-2"></a><span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
+<span id="cb78-3"><a href="wrangling.html#cb78-3"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>)) <span class="op">+</span></span>
+<span id="cb78-4"><a href="wrangling.html#cb78-4"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;US Presidential election result&quot;</span>) <span class="op">+</span></span>
+<span id="cb78-5"><a href="wrangling.html#cb78-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Number of US Presidential candidates&quot;</span>) <span class="op">+</span></span>
+<span id="cb78-6"><a href="wrangling.html#cb78-6"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;US Presidential candidates (1980 - 2016)&quot;</span>) </span></code></pre></div>
 <p><img src="_main_files/figure-html/02-candidate-count-1.png" width="384" /></p>
 <p>From this visualization, we can see that between 1980 - 2016 (inclusive) the Republican party has
 won more US Presidential elections than the Democratic party.</p>
@@ -545,8 +510,8 @@ on the next line.</p>
 <div id="using-to-combine-filter-and-select" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></h3>
 <p>Recall the US state-level property, income, population, and voting data that we explored in chapter 1:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="wrangling.html#cb108-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/state_property_vote.csv&quot;</span>)</span>
-<span id="cb108-2"><a href="wrangling.html#cb108-2"></a>us_data</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="wrangling.html#cb82-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/state_property_vote.csv&quot;</span>)</span>
+<span id="cb82-2"><a href="wrangling.html#cb82-2"></a>us_data</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -565,9 +530,9 @@ on the next line.</p>
 California (“CA”). To do this, we can use the functions <code>filter</code> and <code>select</code>. First we use <code>filter</code> to create a data frame called <code>ca_prop_data</code> that
 contains only values for the state of California. We then use <code>select</code> on this data frame to keep only the median income and
 median property value variables:</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="wrangling.html#cb110-1"></a>ca_prop_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;CA&quot;</span>)</span>
-<span id="cb110-2"><a href="wrangling.html#cb110-2"></a>ca_inc_prop &lt;-<span class="st"> </span><span class="kw">select</span>(ca_prop_data, med_income, med_prop_val)</span>
-<span id="cb110-3"><a href="wrangling.html#cb110-3"></a>ca_inc_prop</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="wrangling.html#cb84-1"></a>ca_prop_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;CA&quot;</span>)</span>
+<span id="cb84-2"><a href="wrangling.html#cb84-2"></a>ca_inc_prop &lt;-<span class="st"> </span><span class="kw">select</span>(ca_prop_data, med_income, med_prop_val)</span>
+<span id="cb84-3"><a href="wrangling.html#cb84-3"></a>ca_inc_prop</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 2
 ##   med_income med_prop_val
 ##        &lt;dbl&gt;        &lt;dbl&gt;
@@ -575,8 +540,8 @@ median property value variables:</p>
 <p>Although this is valid code, there is a more readable approach we could take by using the pipe, <code>%&gt;%</code>. With the pipe,
 we do not need to create an intermediate object to store the output from <code>filter</code>. Instead we can directly send the
 output of <code>filter</code> to the input of <code>select</code>:</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="wrangling.html#cb112-1"></a>ca_inc_prop &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;CA&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(med_income, med_prop_val)</span>
-<span id="cb112-2"><a href="wrangling.html#cb112-2"></a>ca_inc_prop</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="wrangling.html#cb86-1"></a>ca_inc_prop &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;CA&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(med_income, med_prop_val)</span>
+<span id="cb86-2"><a href="wrangling.html#cb86-2"></a>ca_inc_prop</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 2
 ##   med_income med_prop_val
 ##        &lt;dbl&gt;        &lt;dbl&gt;
@@ -592,10 +557,10 @@ argument of <code>select</code> is the data frame we are <code>select</code>-ing
 <p>The <code>%&gt;%</code> can be used with any function in R. Additionally, we can pipe together more than two functions. For
 example, we can pipe together three functions to order the states by commute time for states whose population
 is less than 1 million people:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="wrangling.html#cb114-1"></a>small_state_commutes &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, population <span class="op">&lt;</span><span class="st"> </span><span class="dv">1000000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb114-2"><a href="wrangling.html#cb114-2"></a><span class="st">  </span><span class="kw">select</span>(state, mean_commute_minutes) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb114-3"><a href="wrangling.html#cb114-3"></a><span class="st">  </span><span class="kw">arrange</span>(mean_commute_minutes)</span>
-<span id="cb114-4"><a href="wrangling.html#cb114-4"></a>small_state_commutes</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="wrangling.html#cb88-1"></a>small_state_commutes &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, population <span class="op">&lt;</span><span class="st"> </span><span class="dv">1000000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb88-2"><a href="wrangling.html#cb88-2"></a><span class="st">  </span><span class="kw">select</span>(state, mean_commute_minutes) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb88-3"><a href="wrangling.html#cb88-3"></a><span class="st">  </span><span class="kw">arrange</span>(mean_commute_minutes)</span>
+<span id="cb88-4"><a href="wrangling.html#cb88-4"></a>small_state_commutes</span></code></pre></div>
 <pre><code>## # A tibble: 7 x 2
 ##   state mean_commute_minutes
 ##   &lt;chr&gt;                &lt;dbl&gt;
@@ -627,11 +592,11 @@ to end each line with the pipe operator <code>%&gt;%</code> to tell R that your 
 <code>summarize</code>. Examples of summary statistics we might want to calculate are the number of observations, the average/mean value
 for a column, the minimum value for a column, etc. Below we show how to use the summarize function to calculate the minimum, maximum
 and mean commute time for all US states:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="wrangling.html#cb116-1"></a>us_commute_time_summary &lt;-<span class="st"> </span><span class="kw">summarize</span>(us_data, </span>
-<span id="cb116-2"><a href="wrangling.html#cb116-2"></a>                                  <span class="dt">min_mean_commute =</span> <span class="kw">min</span>(mean_commute_minutes),</span>
-<span id="cb116-3"><a href="wrangling.html#cb116-3"></a>                                  <span class="dt">max_mean_commute =</span> <span class="kw">max</span>(mean_commute_minutes),</span>
-<span id="cb116-4"><a href="wrangling.html#cb116-4"></a>                                  <span class="dt">mean_mean_commute =</span> <span class="kw">mean</span>(mean_commute_minutes))</span>
-<span id="cb116-5"><a href="wrangling.html#cb116-5"></a>us_commute_time_summary</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="wrangling.html#cb90-1"></a>us_commute_time_summary &lt;-<span class="st"> </span><span class="kw">summarize</span>(us_data, </span>
+<span id="cb90-2"><a href="wrangling.html#cb90-2"></a>                                  <span class="dt">min_mean_commute =</span> <span class="kw">min</span>(mean_commute_minutes),</span>
+<span id="cb90-3"><a href="wrangling.html#cb90-3"></a>                                  <span class="dt">max_mean_commute =</span> <span class="kw">max</span>(mean_commute_minutes),</span>
+<span id="cb90-4"><a href="wrangling.html#cb90-4"></a>                                  <span class="dt">mean_mean_commute =</span> <span class="kw">mean</span>(mean_commute_minutes))</span>
+<span id="cb90-5"><a href="wrangling.html#cb90-5"></a>us_commute_time_summary</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 3
 ##   min_mean_commute max_mean_commute mean_mean_commute
 ##              &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;
@@ -645,12 +610,12 @@ the minimum, maximum and mean commute time for each of the groups.</p>
 <p>The <code>group_by</code> function takes at least two arguments. The first is the data frame that will be grouped, and the second and onwards are columns
 to use in the grouping. Here we use only one column for grouping (<code>party</code>), but more than one can also be used. To do this, list additional
 columns separated by commas.</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="wrangling.html#cb118-1"></a>us_commute_time_summary_by_party &lt;-<span class="st"> </span><span class="kw">group_by</span>(us_data, party) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb118-2"><a href="wrangling.html#cb118-2"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_mean_commute =</span> <span class="kw">min</span>(mean_commute_minutes),</span>
-<span id="cb118-3"><a href="wrangling.html#cb118-3"></a>            <span class="dt">max_mean_commute =</span> <span class="kw">max</span>(mean_commute_minutes),</span>
-<span id="cb118-4"><a href="wrangling.html#cb118-4"></a>            <span class="dt">mean_mean_commute =</span> <span class="kw">mean</span>(mean_commute_minutes))</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="wrangling.html#cb92-1"></a>us_commute_time_summary_by_party &lt;-<span class="st"> </span><span class="kw">group_by</span>(us_data, party) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb92-2"><a href="wrangling.html#cb92-2"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">min_mean_commute =</span> <span class="kw">min</span>(mean_commute_minutes),</span>
+<span id="cb92-3"><a href="wrangling.html#cb92-3"></a>            <span class="dt">max_mean_commute =</span> <span class="kw">max</span>(mean_commute_minutes),</span>
+<span id="cb92-4"><a href="wrangling.html#cb92-4"></a>            <span class="dt">mean_mean_commute =</span> <span class="kw">mean</span>(mean_commute_minutes))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="wrangling.html#cb120-1"></a>us_commute_time_summary_by_party</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="wrangling.html#cb94-1"></a>us_commute_time_summary_by_party</span></code></pre></div>
 <pre><code>## # A tibble: 3 x 4
 ##   party          min_mean_commute max_mean_commute mean_mean_commute
 ##   &lt;chr&gt;                     &lt;dbl&gt;            &lt;dbl&gt;             &lt;dbl&gt;
@@ -675,7 +640,7 @@ tranformation for each summary statistic that you want to calculate.</p>
 <p>In cases like this, where you want to apply the same data transformation to all columns, it is more efficient to use <code>purrr</code>’s <code>map</code> function to
 apply it to each column. For example, let’s find the maximum value of each column of the <code>mtcars</code> data frame (a built-in
 data set that comes with R) by using <code>map</code> with the <code>max</code> function. First, let’s peak at the data to familiarize ourselves with it:</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="wrangling.html#cb122-1"></a><span class="kw">head</span>(mtcars)</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="wrangling.html#cb96-1"></a><span class="kw">head</span>(mtcars)</span></code></pre></div>
 <pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
@@ -685,8 +650,8 @@ data set that comes with R) by using <code>map</code> with the <code>max</code> 
 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
 <p>Next, we use <code>map</code> to apply the <code>max</code> function to each column. <code>map</code> takes two arguments, an object (a vector, data frame or list) that you want
 to apply the function to, and the function that you would like to apply. Here our arguments will be <code>mtcars</code> and <code>max</code>:</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="wrangling.html#cb124-1"></a>max_of_columns &lt;-<span class="st"> </span><span class="kw">map</span>(mtcars, max)</span>
-<span id="cb124-2"><a href="wrangling.html#cb124-2"></a>max_of_columns</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="wrangling.html#cb98-1"></a>max_of_columns &lt;-<span class="st"> </span><span class="kw">map</span>(mtcars, max)</span>
+<span id="cb98-2"><a href="wrangling.html#cb98-2"></a>max_of_columns</span></code></pre></div>
 <pre><code>## $mpg
 ## [1] 33.9
 ## 
@@ -725,7 +690,7 @@ do not need to separately load the <code>purrr</code> package.</p>
 </blockquote>
 <p>Our output looks a bit weird…we passed in a data frame, but our output doesn’t look like a data frame. As it so happens, it is <em>not</em> a
 data frame, but rather a plain vanilla list:</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="wrangling.html#cb126-1"></a><span class="kw">typeof</span>(max_of_columns)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="wrangling.html#cb100-1"></a><span class="kw">typeof</span>(max_of_columns)</span></code></pre></div>
 <pre><code>## [1] &quot;list&quot;</code></pre>
 <p>So what do we do? Should we convert this to a data frame? We could, but a simpler alternative is to just use a different <code>map_*</code> function from
 the <code>purrr</code> package. There are quite a few to choose from, they all work similarly and their name refects the type of output you want from
@@ -765,8 +730,8 @@ the mapping operation:</p>
 </tbody>
 </table>
 <p>Let’s get the column maximum’s again, but this time use the <code>map_df</code> function to return the output as a data frame:</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="wrangling.html#cb128-1"></a>max_of_columns &lt;-<span class="st"> </span><span class="kw">map_df</span>(mtcars, max)</span>
-<span id="cb128-2"><a href="wrangling.html#cb128-2"></a>max_of_columns</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="wrangling.html#cb102-1"></a>max_of_columns &lt;-<span class="st"> </span><span class="kw">map_df</span>(mtcars, max)</span>
+<span id="cb102-2"><a href="wrangling.html#cb102-2"></a>max_of_columns</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 11
 ##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 ##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -798,62 +763,24 @@ of a data frame; <code>map_*</code> functions can be used to apply functions to 
 
 </div>
 </div>
-            </section>
+<p style="text-align: center;">
+<a href="reading.html"><button class="btn btn-default">Previous</button></a>
+<a href="viz.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
 
-          </div>
-        </div>
-      </div>
-<a href="reading.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="viz.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
-  </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+
+</div>
+
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-wrangling.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["_main.pdf", "_main.epub"],
-"toc": {
-"collapse": "subsection"
-}
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-});
+
 </script>
 
 </body>
-
 </html>
