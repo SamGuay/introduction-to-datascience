@@ -2,47 +2,11 @@
 <html lang="" xml:lang="">
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Data Science</title>
-  <meta name="description" content="This is an open source textbook for teaching introductory data science." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Introduction to Data Science" />
-  <meta property="og:type" content="book" />
-  
-  
-  <meta property="og:description" content="This is an open source textbook for teaching introductory data science." />
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Data Science" />
-  
-  <meta name="twitter:description" content="This is an open source textbook for teaching introductory data science." />
-  
-
-<meta name="author" content="Tiffany-Anne Timbers" />
-<meta name="author" content="Trevor Campbell" />
-<meta name="author" content="Melissa Lee" />
-
-
-<meta name="date" content="2020-08-14" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-
-<link rel="next" href="reading.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Introduction to Data Science" />
+<meta property="og:type" content="book" />
 
 
 
@@ -51,16 +15,28 @@
 
 
 
+<meta name="description" content="Introduction to Data Science">
 
+<title>Introduction to Data Science</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
 code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -119,149 +95,68 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
 </head>
 
 <body>
 
+<div class="container-fluid main-container">
 
 
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data Science</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#jupyter-notebooks"><i class="fa fa-check"></i><b>1.2</b> Jupyter notebooks</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#loading-a-spreadsheet-like-dataset"><i class="fa fa-check"></i><b>1.3</b> Loading a spreadsheet-like dataset</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assigning-value-to-a-data-frame"><i class="fa fa-check"></i><b>1.4</b> Assigning value to a data frame</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#creating-subsets-of-data-frames-with-select-filter"><i class="fa fa-check"></i><b>1.5</b> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></a><ul>
-<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#using-select-to-extract-multiple-columns"><i class="fa fa-check"></i><b>1.5.1</b> Using <code>select</code> to extract multiple columns</a></li>
-<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#using-select-to-extract-a-range-of-columns"><i class="fa fa-check"></i><b>1.5.2</b> Using <code>select</code> to extract a range of columns</a></li>
-<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#using-filter-to-extract-a-single-row"><i class="fa fa-check"></i><b>1.5.3</b> Using <code>filter</code> to extract a single row</a></li>
-<li class="chapter" data-level="1.5.4" data-path="index.html"><a href="index.html#using-filter-to-extract-rows-with-values-above-a-threshold"><i class="fa fa-check"></i><b>1.5.4</b> Using <code>filter</code> to extract rows with values above a threshold</a></li>
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li class="has-sub"><a href="#introduction-to-data-science"><span class="toc-section-number">1</span> Introduction to Data Science</a><ul>
+<li><a href="#chapter-learning-objectives"><span class="toc-section-number">1.1</span> Chapter learning objectives</a></li>
+<li><a href="#jupyter-notebooks"><span class="toc-section-number">1.2</span> Jupyter notebooks</a></li>
+<li><a href="#loading-a-spreadsheet-like-dataset"><span class="toc-section-number">1.3</span> Loading a spreadsheet-like dataset</a></li>
+<li><a href="#assigning-value-to-a-data-frame"><span class="toc-section-number">1.4</span> Assigning value to a data frame</a></li>
+<li class="has-sub"><a href="#creating-subsets-of-data-frames-with-select-filter"><span class="toc-section-number">1.5</span> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></a><ul>
+<li><a href="#using-select-to-extract-multiple-columns"><span class="toc-section-number">1.5.1</span> Using <code>select</code> to extract multiple columns</a></li>
+<li><a href="#using-select-to-extract-a-range-of-columns"><span class="toc-section-number">1.5.2</span> Using <code>select</code> to extract a range of columns</a></li>
+<li><a href="#using-filter-to-extract-a-single-row"><span class="toc-section-number">1.5.3</span> Using <code>filter</code> to extract a single row</a></li>
+<li><a href="#using-filter-to-extract-rows-with-values-above-a-threshold"><span class="toc-section-number">1.5.4</span> Using <code>filter</code> to extract rows with values above a threshold</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#exploring-data-with-visualizations"><i class="fa fa-check"></i><b>1.6</b> Exploring data with visualizations</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot"><i class="fa fa-check"></i><b>1.6.1</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot-1"><i class="fa fa-check"></i><b>1.6.2</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#formatting-ggplot-objects"><i class="fa fa-check"></i><b>1.6.3</b> Formatting ggplot objects</a></li>
-<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#coloring-points-by-group"><i class="fa fa-check"></i><b>1.6.4</b> Coloring points by group</a></li>
-<li class="chapter" data-level="1.6.5" data-path="index.html"><a href="index.html#putting-it-all-together"><i class="fa fa-check"></i><b>1.6.5</b> Putting it all together</a></li>
-<li class="chapter" data-level="1.6.6" data-path="index.html"><a href="index.html#whats-next"><i class="fa fa-check"></i><b>1.6.6</b> What’s next?</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="reading.html"><a href="reading.html"><i class="fa fa-check"></i><b>2</b> Reading in data locally and from the web</a><ul>
-<li class="chapter" data-level="2.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
-<li class="chapter" data-level="2.2" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="2.3" data-path="reading.html"><a href="reading.html#absolute-and-relative-file-paths"><i class="fa fa-check"></i><b>2.3</b> Absolute and relative file paths</a></li>
-<li class="chapter" data-level="2.4" data-path="reading.html"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><i class="fa fa-check"></i><b>2.4</b> Reading tabular data from a plain text file into R</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="reading.html"><a href="reading.html#skipping-rows-when-reading-in-data"><i class="fa fa-check"></i><b>2.4.1</b> Skipping rows when reading in data</a></li>
-<li class="chapter" data-level="2.4.2" data-path="reading.html"><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><i class="fa fa-check"></i><b>2.4.2</b> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
-<li class="chapter" data-level="2.4.3" data-path="reading.html"><a href="reading.html#reading-tabular-data-directly-from-a-url"><i class="fa fa-check"></i><b>2.4.3</b> Reading tabular data directly from a URL</a></li>
-<li class="chapter" data-level="2.4.4" data-path="reading.html"><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><i class="fa fa-check"></i><b>2.4.4</b> Previewing a data file before reading it into R</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="reading.html"><a href="reading.html#reading-data-from-an-microsoft-excel-file"><i class="fa fa-check"></i><b>2.5</b> Reading data from an Microsoft Excel file</a></li>
-<li class="chapter" data-level="2.6" data-path="reading.html"><a href="reading.html#reading-data-from-a-database"><i class="fa fa-check"></i><b>2.6</b> Reading data from a database</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="reading.html"><a href="reading.html#reading-data-from-a-sqlite-database"><i class="fa fa-check"></i><b>2.6.1</b> Reading data from a SQLite database</a></li>
-<li class="chapter" data-level="2.6.2" data-path="reading.html"><a href="reading.html#reading-data-from-a-postgresql-database"><i class="fa fa-check"></i><b>2.6.2</b> Reading data from a PostgreSQL database</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="reading.html"><a href="reading.html#writing-data-from-r-to-a-.csv-file"><i class="fa fa-check"></i><b>2.7</b> Writing data from R to a <code>.csv</code> file</a></li>
-<li class="chapter" data-level="2.8" data-path="reading.html"><a href="reading.html#scraping-data-off-the-web-using-r"><i class="fa fa-check"></i><b>2.8</b> Scraping data off the web using R</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="reading.html"><a href="reading.html#html-and-css-selectors"><i class="fa fa-check"></i><b>2.8.1</b> HTML and CSS selectors</a></li>
-<li class="chapter" data-level="2.8.2" data-path="reading.html"><a href="reading.html#are-you-allowed-to-scrape-that-website"><i class="fa fa-check"></i><b>2.8.2</b> Are you allowed to scrape that website?</a></li>
-<li class="chapter" data-level="2.8.3" data-path="reading.html"><a href="reading.html#using-rvest"><i class="fa fa-check"></i><b>2.8.3</b> Using <code>rvest</code></a></li>
-</ul></li>
-<li class="chapter" data-level="2.9" data-path="reading.html"><a href="reading.html#additional-readingsresources"><i class="fa fa-check"></i><b>2.9</b> Additional readings/resources</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="wrangling.html"><a href="wrangling.html"><i class="fa fa-check"></i><b>3</b> Cleaning and wrangling data</a><ul>
-<li class="chapter" data-level="3.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
-<li class="chapter" data-level="3.2" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>3.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="3.3" data-path="wrangling.html"><a href="wrangling.html#vectors-and-data-frames"><i class="fa fa-check"></i><b>3.3</b> Vectors and Data frames</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="wrangling.html"><a href="wrangling.html#what-is-a-data-frame"><i class="fa fa-check"></i><b>3.3.1</b> What is a data frame?</a></li>
-<li class="chapter" data-level="3.3.2" data-path="wrangling.html"><a href="wrangling.html#what-is-a-vector"><i class="fa fa-check"></i><b>3.3.2</b> What is a vector?</a></li>
-<li class="chapter" data-level="3.3.3" data-path="wrangling.html"><a href="wrangling.html#how-are-vectors-different-from-a-list"><i class="fa fa-check"></i><b>3.3.3</b> How are vectors different from a list?</a></li>
-<li class="chapter" data-level="3.3.4" data-path="wrangling.html"><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><i class="fa fa-check"></i><b>3.3.4</b> What does this have to do with data frames?</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="wrangling.html"><a href="wrangling.html#tidy-data"><i class="fa fa-check"></i><b>3.4</b> Tidy Data</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="wrangling.html"><a href="wrangling.html#what-is-tidy-data"><i class="fa fa-check"></i><b>3.4.1</b> What is tidy data?</a></li>
-<li class="chapter" data-level="3.4.2" data-path="wrangling.html"><a href="wrangling.html#why-is-tidy-data-important-in-r"><i class="fa fa-check"></i><b>3.4.2</b> Why is tidy data important in R?</a></li>
-<li class="chapter" data-level="3.4.3" data-path="wrangling.html"><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><i class="fa fa-check"></i><b>3.4.3</b> Going from wide to long (or tidy!) using <code>gather</code></a></li>
-<li class="chapter" data-level="3.4.4" data-path="wrangling.html"><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><i class="fa fa-check"></i><b>3.4.4</b> Using separate to deal with multiple delimiters</a></li>
-<li class="chapter" data-level="3.4.5" data-path="wrangling.html"><a href="wrangling.html#notes-on-defining-tidy-data"><i class="fa fa-check"></i><b>3.4.5</b> Notes on defining tidy data</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="wrangling.html"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><i class="fa fa-check"></i><b>3.5</b> Combining functions using the pipe operator, <code>%&gt;%</code>:</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="wrangling.html"><a href="wrangling.html#using-to-combine-filter-and-select"><i class="fa fa-check"></i><b>3.5.1</b> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
-<li class="chapter" data-level="3.5.2" data-path="wrangling.html"><a href="wrangling.html#using-with-more-than-two-functions"><i class="fa fa-check"></i><b>3.5.2</b> Using <code>%&gt;%</code> with more than two functions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="wrangling.html"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><i class="fa fa-check"></i><b>3.6</b> Iterating over data with <code>group_by</code> + <code>summarize</code></a><ul>
-<li class="chapter" data-level="3.6.1" data-path="wrangling.html"><a href="wrangling.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>3.6.1</b> Calculating summary statistics:</a></li>
-<li class="chapter" data-level="3.6.2" data-path="wrangling.html"><a href="wrangling.html#calculating-group-summary-statistics"><i class="fa fa-check"></i><b>3.6.2</b> Calculating group summary statistics:</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="wrangling.html"><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><i class="fa fa-check"></i><b>3.7</b> Additional reading on the <code>dplyr</code> functions</a></li>
-<li class="chapter" data-level="3.8" data-path="wrangling.html"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><i class="fa fa-check"></i><b>3.8</b> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="wrangling.html"><a href="wrangling.html#a-bit-more-about-the-map_-functions"><i class="fa fa-check"></i><b>3.8.1</b> A bit more about the <code>map_*</code> functions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.9" data-path="reading.html"><a href="reading.html#additional-readingsresources"><i class="fa fa-check"></i><b>3.9</b> Additional readings/resources</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="viz.html"><a href="viz.html"><i class="fa fa-check"></i><b>4</b> Effective data visualization</a><ul>
-<li class="chapter" data-level="4.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
-<li class="chapter" data-level="4.2" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>4.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="4.3" data-path="viz.html"><a href="viz.html#choosing-the-visualization"><i class="fa fa-check"></i><b>4.3</b> Choosing the visualization</a></li>
-<li class="chapter" data-level="4.4" data-path="viz.html"><a href="viz.html#refining-the-visualization"><i class="fa fa-check"></i><b>4.4</b> Refining the visualization</a></li>
-<li class="chapter" data-level="4.5" data-path="viz.html"><a href="viz.html#creating-visualizations-with-ggplot2"><i class="fa fa-check"></i><b>4.5</b> Creating visualizations with <code>ggplot2</code></a><ul>
-<li class="chapter" data-level="4.5.1" data-path="viz.html"><a href="viz.html#the-mauna-loa-co2-data-set"><i class="fa fa-check"></i><b>4.5.1</b> The Mauna Loa CO2 data set</a></li>
-<li class="chapter" data-level="4.5.2" data-path="viz.html"><a href="viz.html#the-island-landmass-data-set"><i class="fa fa-check"></i><b>4.5.2</b> The island landmass data set</a></li>
-<li class="chapter" data-level="4.5.3" data-path="viz.html"><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><i class="fa fa-check"></i><b>4.5.3</b> The Old Faithful eruption / waiting time data set</a></li>
-<li class="chapter" data-level="4.5.4" data-path="viz.html"><a href="viz.html#the-michelson-speed-of-light-data-set"><i class="fa fa-check"></i><b>4.5.4</b> The Michelson speed of light data set</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="viz.html"><a href="viz.html#explaining-the-visualization"><i class="fa fa-check"></i><b>4.6</b> Explaining the visualization</a></li>
-<li class="chapter" data-level="4.7" data-path="viz.html"><a href="viz.html#saving-the-visualization"><i class="fa fa-check"></i><b>4.7</b> Saving the visualization</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="index.html"><a href="index.html#introduction-to-data-science"><i class="fa fa-check"></i><b>5</b> Introduction to Data Science</a><ul>
-<li class="chapter" data-level="5.1" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="5.2" data-path="index.html"><a href="index.html#jupyter-notebooks"><i class="fa fa-check"></i><b>5.2</b> Jupyter notebooks</a></li>
-<li class="chapter" data-level="5.3" data-path="index.html"><a href="index.html#loading-a-spreadsheet-like-dataset"><i class="fa fa-check"></i><b>5.3</b> Loading a spreadsheet-like dataset</a></li>
-<li class="chapter" data-level="5.4" data-path="index.html"><a href="index.html#assigning-value-to-a-data-frame"><i class="fa fa-check"></i><b>5.4</b> Assigning value to a data frame</a></li>
-<li class="chapter" data-level="5.5" data-path="index.html"><a href="index.html#creating-subsets-of-data-frames-with-select-filter"><i class="fa fa-check"></i><b>5.5</b> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></a><ul>
-<li class="chapter" data-level="5.5.1" data-path="index.html"><a href="index.html#using-select-to-extract-multiple-columns"><i class="fa fa-check"></i><b>5.5.1</b> Using <code>select</code> to extract multiple columns</a></li>
-<li class="chapter" data-level="5.5.2" data-path="index.html"><a href="index.html#using-select-to-extract-a-range-of-columns"><i class="fa fa-check"></i><b>5.5.2</b> Using <code>select</code> to extract a range of columns</a></li>
-<li class="chapter" data-level="5.5.3" data-path="index.html"><a href="index.html#using-filter-to-extract-a-single-row"><i class="fa fa-check"></i><b>5.5.3</b> Using <code>filter</code> to extract a single row</a></li>
-<li class="chapter" data-level="5.5.4" data-path="index.html"><a href="index.html#using-filter-to-extract-rows-with-values-above-a-threshold"><i class="fa fa-check"></i><b>5.5.4</b> Using <code>filter</code> to extract rows with values above a threshold</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="index.html"><a href="index.html#exploring-data-with-visualizations"><i class="fa fa-check"></i><b>5.6</b> Exploring data with visualizations</a><ul>
-<li class="chapter" data-level="5.6.1" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot"><i class="fa fa-check"></i><b>5.6.1</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="5.6.2" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot-1"><i class="fa fa-check"></i><b>5.6.2</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="5.6.3" data-path="index.html"><a href="index.html#formatting-ggplot-objects"><i class="fa fa-check"></i><b>5.6.3</b> Formatting ggplot objects</a></li>
-<li class="chapter" data-level="5.6.4" data-path="index.html"><a href="index.html#coloring-points-by-group"><i class="fa fa-check"></i><b>5.6.4</b> Coloring points by group</a></li>
-<li class="chapter" data-level="5.6.5" data-path="index.html"><a href="index.html#putting-it-all-together"><i class="fa fa-check"></i><b>5.6.5</b> Putting it all together</a></li>
-<li class="chapter" data-level="5.6.6" data-path="index.html"><a href="index.html#whats-next"><i class="fa fa-check"></i><b>5.6.6</b> What’s next?</a></li>
+<li class="has-sub"><a href="#exploring-data-with-visualizations"><span class="toc-section-number">1.6</span> Exploring data with visualizations</a><ul>
+<li><a href="#using-ggplot-to-create-a-scatter-plot"><span class="toc-section-number">1.6.1</span> Using <code>ggplot</code> to create a scatter plot</a></li>
+<li><a href="#using-ggplot-to-create-a-scatter-plot-1"><span class="toc-section-number">1.6.2</span> Using <code>ggplot</code> to create a scatter plot</a></li>
+<li><a href="#formatting-ggplot-objects"><span class="toc-section-number">1.6.3</span> Formatting ggplot objects</a></li>
+<li><a href="#coloring-points-by-group"><span class="toc-section-number">1.6.4</span> Coloring points by group</a></li>
+<li><a href="#putting-it-all-together"><span class="toc-section-number">1.6.5</span> Putting it all together</a></li>
+<li><a href="#whats-next"><span class="toc-section-number">1.6.6</span> What’s next?</a></li>
 </ul></li>
 </ul></li>
 </ul>
-
-      </nav>
-    </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Data Science</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
 <div id="header">
 <h1 class="title">Introduction to Data Science</h1>
-<p class="author"><em>Tiffany-Anne Timbers</em></p>
-<p class="author"><em>Trevor Campbell</em></p>
-<p class="author"><em>Melissa Lee</em></p>
-<p class="date"><em>2020-08-14</em></p>
 </div>
 <div id="introduction-to-data-science" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction to Data Science</h1>
@@ -402,7 +297,7 @@ var bootstrapThebe = function() {
 }
 document.querySelector("#activateButton").addEventListener('click', bootstrapThebe)
 </script>
-<div class="sourceCode" id="cb2" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   state = col_character(),
@@ -412,8 +307,8 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ##   mean_commute_minutes = col_double(),
 ##   party = col_character()
 ## )</code></pre>
-<div class="sourceCode" id="cb4" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb5" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="index.html#cb5-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb4" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.2          ✓ purrr   0.3.4     
 ## ✓ tibble  3.0.3          ✓ dplyr   1.0.1     
@@ -422,7 +317,7 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 <pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb9" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="index.html#cb9-1"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   state = col_character(),
@@ -464,10 +359,10 @@ the assignment symbol is preferred and is what we will use in this course. When 
 it with quotes like the filename. This is because we are formally telling R about this word and giving it a value. Only characters and words that act as values need
 to be surrounded by quotes.</p>
 <p>Let’s now use the assignment symbol to give the name <code>us_data</code> to the US state-level property, income, population, and voting data frame that we get from <code>read_csv</code>.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="index.html#cb12-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <p>Wait a minute! Nothing happened this time! Or at least it looks like that. But actually something did happen: the data was read in and now has the name <code>us_data</code> associated with it.
 And we can use that name to access the data frame and do things with it. First we will type the name of the data frame to print it to the screen.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="index.html#cb13-1"></a>us_data</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>us_data</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -489,7 +384,7 @@ And we can use that name to access the data frame and do things with it. First w
 The <code>select</code> function allows you to create a subset of the columns of a data frame, while the <code>filter</code> function allows you to obtain a subset of the rows with specific values.</p>
 <p>Before we start using <code>select</code> and <code>filter</code>, let’s take a look at the US state-level property, income, and population data again to familiarize ourselves with it.
 We will do this by printing the data we loaded earlier in the chapter to the screen.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="index.html#cb15-1"></a>us_data</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>us_data</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -517,8 +412,8 @@ and 6 columns:</p>
 <p>Now let’s use <code>select</code> to extract the state column from this data frame. To do this, we need to provide the <code>select</code> function with two arguments. The first argument is the
 name of the data frame object, which in this example is <code>us_data</code>. The second argument is the column name that we want to select, here <code>state</code>. After passing these two arguments,
 the <code>select</code> function returns a single column (the state column that we asked for) as a data frame.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="index.html#cb17-1"></a>state_column &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state)</span>
-<span id="cb17-2"><a href="index.html#cb17-2"></a>state_column</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>state_column &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state)</span>
+<span id="cb17-2"><a href="#cb17-2"></a>state_column</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 1
 ##    state
 ##    &lt;chr&gt;
@@ -537,8 +432,8 @@ the <code>select</code> function returns a single column (the state column that 
 <h3><span class="header-section-number">1.5.1</span> Using <code>select</code> to extract multiple columns</h3>
 <p>We can also use <code>select</code> to obtain a subset of the data frame with multiple columns. Again, the first argument is the name of the data frame.
 Then we list all the columns we want as arguments separated by commas. Here we create a subset of three columns: state, median property value, and mean commute time in minutes.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="index.html#cb19-1"></a>three_columns &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state, med_prop_val, mean_commute_minutes)</span>
-<span id="cb19-2"><a href="index.html#cb19-2"></a>three_columns</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>three_columns &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state, med_prop_val, mean_commute_minutes)</span>
+<span id="cb19-2"><a href="#cb19-2"></a>three_columns</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 3
 ##    state med_prop_val mean_commute_minutes
 ##    &lt;chr&gt;        &lt;dbl&gt;                &lt;dbl&gt;
@@ -558,8 +453,8 @@ Then we list all the columns we want as arguments separated by commas. Here we c
 <h3><span class="header-section-number">1.5.2</span> Using <code>select</code> to extract a range of columns</h3>
 <p>We can also use <code>select</code> to obtain a subset of the data frame constructed from a range of columns. To do this we use the colon (<code>:</code>) operator to denote the range.
 For example, to get all the columns in the data frame from <code>state</code> to <code>med_prop_val</code> we pass <code>state:med_prop_val</code> as the second argument to the <code>select</code> function.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="index.html#cb21-1"></a>column_range &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state<span class="op">:</span>med_prop_val)</span>
-<span id="cb21-2"><a href="index.html#cb21-2"></a>column_range</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>column_range &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state<span class="op">:</span>med_prop_val)</span>
+<span id="cb21-2"><a href="#cb21-2"></a>column_range</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 3
 ##    state med_income med_prop_val
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;
@@ -583,8 +478,8 @@ this comparison, we use the <em>equivalency operator</em> <code>==</code> to com
 here we need to put quotes around <code>"NY"</code> to tell R that this is a character value and not one of the special words that make up R programming language, nor one of the names
 we have given to data frames in the code we have already written.</p>
 <p>With these arguments, <code>filter</code> returns a data frame that has all the columns of the input data frame but only the rows we asked for in our logical filter statement.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="index.html#cb23-1"></a>new_york &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;NY&quot;</span>)</span>
-<span id="cb23-2"><a href="index.html#cb23-2"></a>new_york</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>new_york &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;NY&quot;</span>)</span>
+<span id="cb23-2"><a href="#cb23-2"></a>new_york</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 6
 ##   state med_income med_prop_val population mean_commute_minutes party   
 ##   &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;   
@@ -596,8 +491,8 @@ we have given to data frames in the code we have already written.</p>
 to obtain rows where the value of <code>mean_commute_minutes</code> is greater than 21.5.
 In this case, we see that <code>filter</code> returns a data frame with 33 rows; this indicates that there are 33
 states with longer commute times on average than New York.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="index.html#cb25-1"></a>long_commutes &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, mean_commute_minutes <span class="op">&gt;</span><span class="st"> </span><span class="fl">21.5</span>)</span>
-<span id="cb25-2"><a href="index.html#cb25-2"></a>long_commutes</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>long_commutes &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, mean_commute_minutes <span class="op">&gt;</span><span class="st"> </span><span class="fl">21.5</span>)</span>
+<span id="cb25-2"><a href="#cb25-2"></a>long_commutes</span></code></pre></div>
 <pre><code>## # A tibble: 33 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -630,7 +525,7 @@ The data are therefore in what we call a <em>tidy data</em> format.
 This is particularly important and will be a major focus in the remainder of this course: many of the functions from <code>tidyverse</code> require tidy data,
 including the <code>ggplot</code> function that we will use shortly for our visualization. Note below that we use the <code>print</code> function to display the <code>us_data</code> rather
 than just typing <code>us_data</code>; for data frames, these do the same thing.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="index.html#cb27-1"></a><span class="kw">print</span>(us_data)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">print</span>(us_data)</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -657,9 +552,9 @@ To create a scatter plot of these two variables using the <code>ggplot</code> fu
 <li>add a <code>+</code> symbol at the end of the <code>ggplot</code> call to add a layer to the plot</li>
 <li>call the <code>geom_point</code> function to tell R that we want to represent the data points as dots/points to create a scatter plot.</li>
 </ol>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="index.html#cb29-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
-<span id="cb29-2"><a href="index.html#cb29-2"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/prop_val_vs_income-1.png" width="456" /></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="index_files/figure-html/prop_val_vs_income-1.png" width="456" /></p>
 <blockquote>
 <p><strong>In case you have used R before and are curious:</strong>
 There are a small number of situations in which you can have a single R expression span multiple lines.
@@ -674,11 +569,11 @@ lot when using <code>ggplot</code> as it keeps things more readable.</p>
 For example, we can use the <code>xlab</code> and <code>ylab</code> functions to add layers where we specify human readable labels for the x and y axes.
 Again, since we are specifying words (e.g. <code>"Income (USD)"</code>) as arguments to <code>xlab</code> and <code>ylab</code>, we surround them with double quotes.
 There are many more layers we can add to format the plot further, and we will explore these in later chapters.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="index.html#cb30-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
-<span id="cb30-2"><a href="index.html#cb30-2"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb30-3"><a href="index.html#cb30-3"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb30-4"><a href="index.html#cb30-4"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)    </span></code></pre></div>
-<p><img src="_main_files/figure-html/prop_val_vs_income_human_labs-1.png" width="456" /></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)    </span></code></pre></div>
+<p><img src="index_files/figure-html/prop_val_vs_income_human_labs-1.png" width="456" /></p>
 <p>From this visualization we see that for the 52 US regions in this data set, as median household income increases so does median property value. When we see
 two variables do this, we call this a <em>positive relationship</em>. Because the increasing pattern is fairly clear
 (not fuzzy) we can say that the relationship is strong. Because of the data point in the lower left-hand corner, drawing a straight line through these
@@ -695,23 +590,23 @@ scatter plot we have already created by group/category. For example,
 given that we have the party each state voted for in the 2016 US Presidential election in the column named <code>party</code>, we can colour the points in our previous
 scatter plot to represent who each stated voted for.</p>
 <p>To do this we modify our scatter plot code above. Specifically, we will add an argument to the <code>aes</code> function, specifying that the points should be coloured by the <code>party</code> column:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="index.html#cb31-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
-<span id="cb31-2"><a href="index.html#cb31-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb31-3"><a href="index.html#cb31-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb31-4"><a href="index.html#cb31-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/scatter_colour_by_party-1.png" width="552" /></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb31-4"><a href="#cb31-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
+<p><img src="index_files/figure-html/scatter_colour_by_party-1.png" width="552" /></p>
 <p>This data visualization shows that the one data point we singled out earlier on the far left of the plot has the label of “not applicable” instead of “democrat” or “republican”.
 Let’s use filter to look at the row that contains the “not applicable” value in the party column:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="index.html#cb32-1"></a>missing_party &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">==</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
-<span id="cb32-2"><a href="index.html#cb32-2"></a>missing_party</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>missing_party &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">==</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
+<span id="cb32-2"><a href="#cb32-2"></a>missing_party</span></code></pre></div>
 <pre><code>## # A tibble: 0 x 6
 ## # … with 6 variables: state &lt;chr&gt;, med_income &lt;dbl&gt;, med_prop_val &lt;dbl&gt;,
 ## #   population &lt;dbl&gt;, mean_commute_minutes &lt;dbl&gt;, party &lt;fct&gt;</code></pre>
 <p>That explains it! That row in the dataset is actually not a US state, but rather the US territory of Peurto Rico. Similar to other US territories, residents of Puerto Rico
 cannot vote in presidential elections. Hence the “not applicable” label. Let’s remove this row from the data frame and rename the data frame <code>vote_data</code>.
 To do this, we use the opposite of the equivalency operator (<code>==</code>) for our filter statement, the not equivalent operator (<code>!=</code>).</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="index.html#cb34-1"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
-<span id="cb34-2"><a href="index.html#cb34-2"></a>vote_data</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
+<span id="cb34-2"><a href="#cb34-2"></a>vote_data</span></code></pre></div>
 <pre><code>## # A tibble: 51 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;fct&gt;     
@@ -728,11 +623,11 @@ To do this, we use the opposite of the equivalency operator (<code>==</code>) fo
 ## # … with 41 more rows</code></pre>
 <p>Now we see that the data frame has 51 rows corresponding to the 50 states and the District of Columbia - all regions where residents can vote in US presidential elections.
 Let’s now recreate the scatter plot we made above using this data frame subset:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="index.html#cb36-1"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
-<span id="cb36-2"><a href="index.html#cb36-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb36-3"><a href="index.html#cb36-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb36-4"><a href="index.html#cb36-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/scatter_colour_by_party_no_PR-1.png" width="552" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
+<p><img src="index_files/figure-html/scatter_colour_by_party_no_PR-1.png" width="552" /></p>
 <p>What do we see when considering the second part of our exploratory question? Do we see a pattern in how certain states voted in the 2016 Presidential election? We do!
 Most of the US States who voted for the Republican candidate in the 2016 US Presidential election had lower median household income and lower median property values (data points primarily
 fall in lower left-hand side of the scatter plot), whereas most of the US states who voted for the Democratic candidate in the 2016 US Presidential election had higher median household
@@ -745,81 +640,40 @@ see more of later in this course.</p>
 <div id="putting-it-all-together" class="section level3">
 <h3><span class="header-section-number">1.6.5</span> Putting it all together</h3>
 <p>Below, we put everything from this chapter together in one code chunk. This demonstrates the power of R: in relatively few lines of code, we are able to create an entire data science workflow.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="index.html#cb37-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb37-2"><a href="index.html#cb37-2"></a></span>
-<span id="cb37-3"><a href="index.html#cb37-3"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span>
-<span id="cb37-4"><a href="index.html#cb37-4"></a></span>
-<span id="cb37-5"><a href="index.html#cb37-5"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
-<span id="cb37-6"><a href="index.html#cb37-6"></a></span>
-<span id="cb37-7"><a href="index.html#cb37-7"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
-<span id="cb37-8"><a href="index.html#cb37-8"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb37-9"><a href="index.html#cb37-9"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb37-10"><a href="index.html#cb37-10"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/nachos_to_cheesecake-1.png" width="552" /></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb37-2"><a href="#cb37-2"></a></span>
+<span id="cb37-3"><a href="#cb37-3"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span>
+<span id="cb37-4"><a href="#cb37-4"></a></span>
+<span id="cb37-5"><a href="#cb37-5"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
+<span id="cb37-6"><a href="#cb37-6"></a></span>
+<span id="cb37-7"><a href="#cb37-7"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
+<span id="cb37-8"><a href="#cb37-8"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb37-9"><a href="#cb37-9"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb37-10"><a href="#cb37-10"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
+<p><img src="index_files/figure-html/nachos_to_cheesecake-1.png" width="552" /></p>
 </div>
 <div id="whats-next" class="section level3">
 <h3><span class="header-section-number">1.6.6</span> What’s next?</h3>
 <p>In the next chapter, we will dig in and spend more time learning how to load spreadsheet-like datasets of various formats into R, as well as how to scrape data from the web!</p>
-
 </div>
 </div>
 </div>
-            </section>
+<p style="text-align: center;">
+</p>
+</div>
+</div>
 
-          </div>
-        </div>
-      </div>
 
-<a href="reading.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
-  </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+</div>
+
 <script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"toc": {
-"collapse": "subsection"
-}
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 });
-});
+
 </script>
 
 </body>
-
 </html>

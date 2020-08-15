@@ -1,8 +1,6 @@
---- 
-title: "Introduction to Data Science"
-output:
-  bookdown::html_book:
-    split_by: chapter
+---
+title: "test_thebelab"
+output: html_document
 ---
 
 <!-- Some stuff from thebelab required for the magic -->

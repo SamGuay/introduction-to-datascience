@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Data Science</title>
+  <title>Chapter 5 Introduction to Data Science | Introduction to Data Science</title>
   <meta name="description" content="This is an open source textbook for teaching introductory data science." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Data Science" />
+  <meta property="og:title" content="Chapter 5 Introduction to Data Science | Introduction to Data Science" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Data Science" />
+  <meta name="twitter:title" content="Chapter 5 Introduction to Data Science | Introduction to Data Science" />
   
   <meta name="twitter:description" content="This is an open source textbook for teaching introductory data science." />
   
@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="viz.html"/>
 
-<link rel="next" href="reading.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -120,6 +120,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -132,6 +133,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Introduction to Data Science</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data Science</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Chapter learning objectives</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#jupyter-notebooks"><i class="fa fa-check"></i><b>1.2</b> Jupyter notebooks</a></li>
@@ -239,6 +243,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.6.6" data-path="index.html"><a href="index.html#whats-next"><i class="fa fa-check"></i><b>5.6.6</b> What’s next?</a></li>
 </ul></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -256,15 +263,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Data Science</h1>
-<p class="author"><em>Tiffany-Anne Timbers</em></p>
-<p class="author"><em>Trevor Campbell</em></p>
-<p class="author"><em>Melissa Lee</em></p>
-<p class="date"><em>2020-08-14</em></p>
-</div>
 <div id="introduction-to-data-science" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction to Data Science</h1>
+<h1><span class="header-section-number">Chapter 5</span> Introduction to Data Science</h1>
 <p>This is an open source textbook aimed at introducing undergraduate students to data science. It was originally written for the University of British Columbia’s <a href="https://ubc-dsci.github.io/dsci-100/">DSCI 100 - Introduction to Data Science</a> course. In this book, we define data science as the study and development of reproducible, auditable processes to obtain value (i.e., insight) from data.</p>
 <p>The book is structured so that learners spend the first four chapters learning how to use the R programming language and Jupyter notebooks to load, wrangle/clean, and visualize data, while answering descriptive and exploratory data analysis questions. The remaining chapters illustrate how to solve four common problems in data science, which are useful for answering predictive and inferential data analysis questions:</p>
 <ol style="list-style-type: decimal">
@@ -323,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p>Source: <a href="https://science.sciencemag.org/content/347/6228/1314">What is the question?</a> by Jeffery T. Leek, Roger D. Peng &amp; <a href="https://leanpub.com/artofdatascience">The Art of Data Science</a> by Roger Peng &amp; Elizabeth Matsui</p>
 <div id="chapter-learning-objectives" class="section level2">
-<h2><span class="header-section-number">1.1</span> Chapter learning objectives</h2>
+<h2><span class="header-section-number">5.1</span> Chapter learning objectives</h2>
 <p>By the end of the chapter, students will be able to:</p>
 <ul>
 <li>use a Jupyter notebook to execute provided R code</li>
@@ -344,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 <div id="jupyter-notebooks" class="section level2">
-<h2><span class="header-section-number">1.2</span> Jupyter notebooks</h2>
+<h2><span class="header-section-number">5.2</span> Jupyter notebooks</h2>
 <p>Jupyter notebooks are documents that contain a mix of computer code (and its output) and formattable text. Given that they are able to combine these two in a single document—code is not separate from the output or written report—notebooks are one of the leading tools to create <em>reproducible data analyses</em>. A reproducible data analysis is one where you can reliably and easily recreate the same results when analyzing the same data. Although this sounds like something that should always be true of any data analysis, in reality this is not often the case; one needs to make a conscious effort to perform data analysis in a reproducible manner.</p>
 <p>The name Jupyter came from combining the names of the three programming language that it was initially targeted for (Julia, Python, and R), and now many other languages can be used with Jupyter notebooks.</p>
 <p>A notebook looks like this:</p>
@@ -355,7 +355,7 @@ However, the best way to learn how to write and run code and formattable text in
 </iframe>
 </div>
 <div id="loading-a-spreadsheet-like-dataset" class="section level2">
-<h2><span class="header-section-number">1.3</span> Loading a spreadsheet-like dataset</h2>
+<h2><span class="header-section-number">5.3</span> Loading a spreadsheet-like dataset</h2>
 <p>Often, the first thing we need to do in data analysis is to load a dataset into R. When we bring spreadsheet-like (think Microsoft Excel tables) data, generally shaped like a rectangle, into R it is represented as what we call a <em>data frame</em> object. It is very similar to a spreadsheet where the rows are the collected observations and the columns are the variables.</p>
 <p><img src="img/spreadsheet_vs_dataframe.PNG" width="850"/></p>
 <p>The first kind of data we will learn how to load into R (as a data frame) is the
@@ -402,7 +402,7 @@ var bootstrapThebe = function() {
 }
 document.querySelector("#activateButton").addEventListener('click', bootstrapThebe)
 </script>
-<div class="sourceCode" id="cb2" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="index.html#cb2-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-data-science.html#cb2-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   state = col_character(),
@@ -412,8 +412,8 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ##   mean_commute_minutes = col_double(),
 ##   party = col_character()
 ## )</code></pre>
-<div class="sourceCode" id="cb4" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb5" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="index.html#cb5-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<div class="sourceCode" id="cb4" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-data-science.html#cb4-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-data-science.html#cb5-1"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
 <pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.2          ✓ purrr   0.3.4     
 ## ✓ tibble  3.0.3          ✓ dplyr   1.0.1     
@@ -422,7 +422,7 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 <pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb9" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="index.html#cb9-1"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introduction-to-data-science.html#cb9-1"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   state = col_character(),
@@ -455,7 +455,7 @@ This has several benefits that we’ll discuss in further detail later in the co
 </blockquote>
 </div>
 <div id="assigning-value-to-a-data-frame" class="section level2">
-<h2><span class="header-section-number">1.4</span> Assigning value to a data frame</h2>
+<h2><span class="header-section-number">5.4</span> Assigning value to a data frame</h2>
 <p>When we loaded the US state-level property, income, population, and voting data in R above using <code>read_csv</code>, we did not give this data frame a name, so it was
 just printed to the screen and we cannot do anything else with it. That isn’t very useful; what we would like to do is give a name to the data frame that <code>read_csv</code> outputs
 so that we can use it later for analysis and visualization.</p>
@@ -464,10 +464,10 @@ the assignment symbol is preferred and is what we will use in this course. When 
 it with quotes like the filename. This is because we are formally telling R about this word and giving it a value. Only characters and words that act as values need
 to be surrounded by quotes.</p>
 <p>Let’s now use the assignment symbol to give the name <code>us_data</code> to the US state-level property, income, population, and voting data frame that we get from <code>read_csv</code>.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="index.html#cb12-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction-to-data-science.html#cb12-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <p>Wait a minute! Nothing happened this time! Or at least it looks like that. But actually something did happen: the data was read in and now has the name <code>us_data</code> associated with it.
 And we can use that name to access the data frame and do things with it. First we will type the name of the data frame to print it to the screen.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="index.html#cb13-1"></a>us_data</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction-to-data-science.html#cb13-1"></a>us_data</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -484,12 +484,12 @@ And we can use that name to access the data frame and do things with it. First w
 ## # … with 42 more rows</code></pre>
 </div>
 <div id="creating-subsets-of-data-frames-with-select-filter" class="section level2">
-<h2><span class="header-section-number">1.5</span> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></h2>
+<h2><span class="header-section-number">5.5</span> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></h2>
 <p>Now, we are going to learn how to obtain subsets of data from a data frame in R using two other <code>tidyverse</code> functions: <code>select</code> and <code>filter</code>.
 The <code>select</code> function allows you to create a subset of the columns of a data frame, while the <code>filter</code> function allows you to obtain a subset of the rows with specific values.</p>
 <p>Before we start using <code>select</code> and <code>filter</code>, let’s take a look at the US state-level property, income, and population data again to familiarize ourselves with it.
 We will do this by printing the data we loaded earlier in the chapter to the screen.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="index.html#cb15-1"></a>us_data</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introduction-to-data-science.html#cb15-1"></a>us_data</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -517,8 +517,8 @@ and 6 columns:</p>
 <p>Now let’s use <code>select</code> to extract the state column from this data frame. To do this, we need to provide the <code>select</code> function with two arguments. The first argument is the
 name of the data frame object, which in this example is <code>us_data</code>. The second argument is the column name that we want to select, here <code>state</code>. After passing these two arguments,
 the <code>select</code> function returns a single column (the state column that we asked for) as a data frame.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="index.html#cb17-1"></a>state_column &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state)</span>
-<span id="cb17-2"><a href="index.html#cb17-2"></a>state_column</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="introduction-to-data-science.html#cb17-1"></a>state_column &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state)</span>
+<span id="cb17-2"><a href="introduction-to-data-science.html#cb17-2"></a>state_column</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 1
 ##    state
 ##    &lt;chr&gt;
@@ -534,11 +534,11 @@ the <code>select</code> function returns a single column (the state column that 
 ## 10 FL   
 ## # … with 42 more rows</code></pre>
 <div id="using-select-to-extract-multiple-columns" class="section level3">
-<h3><span class="header-section-number">1.5.1</span> Using <code>select</code> to extract multiple columns</h3>
+<h3><span class="header-section-number">5.5.1</span> Using <code>select</code> to extract multiple columns</h3>
 <p>We can also use <code>select</code> to obtain a subset of the data frame with multiple columns. Again, the first argument is the name of the data frame.
 Then we list all the columns we want as arguments separated by commas. Here we create a subset of three columns: state, median property value, and mean commute time in minutes.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="index.html#cb19-1"></a>three_columns &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state, med_prop_val, mean_commute_minutes)</span>
-<span id="cb19-2"><a href="index.html#cb19-2"></a>three_columns</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="introduction-to-data-science.html#cb19-1"></a>three_columns &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state, med_prop_val, mean_commute_minutes)</span>
+<span id="cb19-2"><a href="introduction-to-data-science.html#cb19-2"></a>three_columns</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 3
 ##    state med_prop_val mean_commute_minutes
 ##    &lt;chr&gt;        &lt;dbl&gt;                &lt;dbl&gt;
@@ -555,11 +555,11 @@ Then we list all the columns we want as arguments separated by commas. Here we c
 ## # … with 42 more rows</code></pre>
 </div>
 <div id="using-select-to-extract-a-range-of-columns" class="section level3">
-<h3><span class="header-section-number">1.5.2</span> Using <code>select</code> to extract a range of columns</h3>
+<h3><span class="header-section-number">5.5.2</span> Using <code>select</code> to extract a range of columns</h3>
 <p>We can also use <code>select</code> to obtain a subset of the data frame constructed from a range of columns. To do this we use the colon (<code>:</code>) operator to denote the range.
 For example, to get all the columns in the data frame from <code>state</code> to <code>med_prop_val</code> we pass <code>state:med_prop_val</code> as the second argument to the <code>select</code> function.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="index.html#cb21-1"></a>column_range &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state<span class="op">:</span>med_prop_val)</span>
-<span id="cb21-2"><a href="index.html#cb21-2"></a>column_range</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introduction-to-data-science.html#cb21-1"></a>column_range &lt;-<span class="st"> </span><span class="kw">select</span>(us_data, state<span class="op">:</span>med_prop_val)</span>
+<span id="cb21-2"><a href="introduction-to-data-science.html#cb21-2"></a>column_range</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 3
 ##    state med_income med_prop_val
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;
@@ -576,28 +576,28 @@ For example, to get all the columns in the data frame from <code>state</code> to
 ## # … with 42 more rows</code></pre>
 </div>
 <div id="using-filter-to-extract-a-single-row" class="section level3">
-<h3><span class="header-section-number">1.5.3</span> Using <code>filter</code> to extract a single row</h3>
+<h3><span class="header-section-number">5.5.3</span> Using <code>filter</code> to extract a single row</h3>
 <p>We can use the <code>filter</code> function to obtain the subset of rows with desired values from a data frame. Again, our first argument is the name of the data frame object, <code>us_data</code>.
 The second argument is a logical statement to use when filtering the rows. Here, for example, we’ll say that we are interested in rows where state equals NY (for New York). To make
 this comparison, we use the <em>equivalency operator</em> <code>==</code> to compare the values of the <code>state</code> column with the value <code>"NY"</code>. Similar to when we loaded the data file and put quotes around the filename,
 here we need to put quotes around <code>"NY"</code> to tell R that this is a character value and not one of the special words that make up R programming language, nor one of the names
 we have given to data frames in the code we have already written.</p>
 <p>With these arguments, <code>filter</code> returns a data frame that has all the columns of the input data frame but only the rows we asked for in our logical filter statement.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="index.html#cb23-1"></a>new_york &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;NY&quot;</span>)</span>
-<span id="cb23-2"><a href="index.html#cb23-2"></a>new_york</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introduction-to-data-science.html#cb23-1"></a>new_york &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, state <span class="op">==</span><span class="st"> &quot;NY&quot;</span>)</span>
+<span id="cb23-2"><a href="introduction-to-data-science.html#cb23-2"></a>new_york</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 6
 ##   state med_income med_prop_val population mean_commute_minutes party   
 ##   &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;   
 ## 1 NY         50839       134150   19673174                 24.4 Democrat</code></pre>
 </div>
 <div id="using-filter-to-extract-rows-with-values-above-a-threshold" class="section level3">
-<h3><span class="header-section-number">1.5.4</span> Using <code>filter</code> to extract rows with values above a threshold</h3>
+<h3><span class="header-section-number">5.5.4</span> Using <code>filter</code> to extract rows with values above a threshold</h3>
 <p>If we are interested in finding information about the states who have a longer mean commute time than New York—whose mean commute time is 21.5 minutes—then we can create a filter
 to obtain rows where the value of <code>mean_commute_minutes</code> is greater than 21.5.
 In this case, we see that <code>filter</code> returns a data frame with 33 rows; this indicates that there are 33
 states with longer commute times on average than New York.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="index.html#cb25-1"></a>long_commutes &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, mean_commute_minutes <span class="op">&gt;</span><span class="st"> </span><span class="fl">21.5</span>)</span>
-<span id="cb25-2"><a href="index.html#cb25-2"></a>long_commutes</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introduction-to-data-science.html#cb25-1"></a>long_commutes &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, mean_commute_minutes <span class="op">&gt;</span><span class="st"> </span><span class="fl">21.5</span>)</span>
+<span id="cb25-2"><a href="introduction-to-data-science.html#cb25-2"></a>long_commutes</span></code></pre></div>
 <pre><code>## # A tibble: 33 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -615,7 +615,7 @@ states with longer commute times on average than New York.</p>
 </div>
 </div>
 <div id="exploring-data-with-visualizations" class="section level2">
-<h2><span class="header-section-number">1.6</span> Exploring data with visualizations</h2>
+<h2><span class="header-section-number">5.6</span> Exploring data with visualizations</h2>
 <p>Creating effective data visualizations is an essential piece to any data analysis. For the remainder of Chapter 1, we will learn how to use
 functions from the <code>tidyverse</code> to make visualizations that let us explore relationships in data. In particular, we’ll develop a visualization
 of the US property, income, population, and voting data we’ve been working with that will help us understand two potential relationships in the data:
@@ -623,14 +623,14 @@ first, the relationship between median household income and median propery value
 voted for in the 2016 US election. This is an example of an exploratory data analysis
 question: we are looking for relationships and patterns within the data set we have, but are not trying to generalize what we find beyond this data set.</p>
 <div id="using-ggplot-to-create-a-scatter-plot" class="section level3">
-<h3><span class="header-section-number">1.6.1</span> Using <code>ggplot</code> to create a scatter plot</h3>
+<h3><span class="header-section-number">5.6.1</span> Using <code>ggplot</code> to create a scatter plot</h3>
 <p>Taking another look at our dataset below, we can immediately see that the three columns (or variables) we are interested in visualizing—median household
 income, median property value, and election result—are all in separate columns. In addition, there is a single row (or observation) for each state.
 The data are therefore in what we call a <em>tidy data</em> format.
 This is particularly important and will be a major focus in the remainder of this course: many of the functions from <code>tidyverse</code> require tidy data,
 including the <code>ggplot</code> function that we will use shortly for our visualization. Note below that we use the <code>print</code> function to display the <code>us_data</code> rather
 than just typing <code>us_data</code>; for data frames, these do the same thing.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="index.html#cb27-1"></a><span class="kw">print</span>(us_data)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introduction-to-data-science.html#cb27-1"></a><span class="kw">print</span>(us_data)</span></code></pre></div>
 <pre><code>## # A tibble: 52 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;chr&gt;     
@@ -647,7 +647,7 @@ than just typing <code>us_data</code>; for data frames, these do the same thing.
 ## # … with 42 more rows</code></pre>
 </div>
 <div id="using-ggplot-to-create-a-scatter-plot-1" class="section level3">
-<h3><span class="header-section-number">1.6.2</span> Using <code>ggplot</code> to create a scatter plot</h3>
+<h3><span class="header-section-number">5.6.2</span> Using <code>ggplot</code> to create a scatter plot</h3>
 <p>We will begin with a scatter plot of the income and property value columns from our data frame.
 To create a scatter plot of these two variables using the <code>ggplot</code> function, we do the following:</p>
 <ol style="list-style-type: decimal">
@@ -657,8 +657,8 @@ To create a scatter plot of these two variables using the <code>ggplot</code> fu
 <li>add a <code>+</code> symbol at the end of the <code>ggplot</code> call to add a layer to the plot</li>
 <li>call the <code>geom_point</code> function to tell R that we want to represent the data points as dots/points to create a scatter plot.</li>
 </ol>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="index.html#cb29-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
-<span id="cb29-2"><a href="index.html#cb29-2"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="introduction-to-data-science.html#cb29-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
+<span id="cb29-2"><a href="introduction-to-data-science.html#cb29-2"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/prop_val_vs_income-1.png" width="456" /></p>
 <blockquote>
 <p><strong>In case you have used R before and are curious:</strong>
@@ -669,15 +669,15 @@ lot when using <code>ggplot</code> as it keeps things more readable.</p>
 </blockquote>
 </div>
 <div id="formatting-ggplot-objects" class="section level3">
-<h3><span class="header-section-number">1.6.3</span> Formatting ggplot objects</h3>
+<h3><span class="header-section-number">5.6.3</span> Formatting ggplot objects</h3>
 <p>One common and easy way to format your <code>ggplot</code> visualization is to add additional layers to the plot object using the <code>+</code> symbol.
 For example, we can use the <code>xlab</code> and <code>ylab</code> functions to add layers where we specify human readable labels for the x and y axes.
 Again, since we are specifying words (e.g. <code>"Income (USD)"</code>) as arguments to <code>xlab</code> and <code>ylab</code>, we surround them with double quotes.
 There are many more layers we can add to format the plot further, and we will explore these in later chapters.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="index.html#cb30-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
-<span id="cb30-2"><a href="index.html#cb30-2"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb30-3"><a href="index.html#cb30-3"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb30-4"><a href="index.html#cb30-4"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)    </span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="introduction-to-data-science.html#cb30-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val)) <span class="op">+</span></span>
+<span id="cb30-2"><a href="introduction-to-data-science.html#cb30-2"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb30-3"><a href="introduction-to-data-science.html#cb30-3"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb30-4"><a href="introduction-to-data-science.html#cb30-4"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)    </span></code></pre></div>
 <p><img src="_main_files/figure-html/prop_val_vs_income_human_labs-1.png" width="456" /></p>
 <p>From this visualization we see that for the 52 US regions in this data set, as median household income increases so does median property value. When we see
 two variables do this, we call this a <em>positive relationship</em>. Because the increasing pattern is fairly clear
@@ -688,30 +688,30 @@ which focuses on data visualization. Then, we will explicitly teach you how to d
 from a visualization.</p>
 </div>
 <div id="coloring-points-by-group" class="section level3">
-<h3><span class="header-section-number">1.6.4</span> Coloring points by group</h3>
+<h3><span class="header-section-number">5.6.4</span> Coloring points by group</h3>
 <p>Now we’ll move onto the second part of our exploratory data analysis question: when considering the relationship between median household income and median property
 value, is there a pattern in which party each state voted for in the 2016 US election? One common way to explore this is to colour the data points on the
 scatter plot we have already created by group/category. For example,
 given that we have the party each state voted for in the 2016 US Presidential election in the column named <code>party</code>, we can colour the points in our previous
 scatter plot to represent who each stated voted for.</p>
 <p>To do this we modify our scatter plot code above. Specifically, we will add an argument to the <code>aes</code> function, specifying that the points should be coloured by the <code>party</code> column:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="index.html#cb31-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
-<span id="cb31-2"><a href="index.html#cb31-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb31-3"><a href="index.html#cb31-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb31-4"><a href="index.html#cb31-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="introduction-to-data-science.html#cb31-1"></a><span class="kw">ggplot</span>(us_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
+<span id="cb31-2"><a href="introduction-to-data-science.html#cb31-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb31-3"><a href="introduction-to-data-science.html#cb31-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb31-4"><a href="introduction-to-data-science.html#cb31-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/scatter_colour_by_party-1.png" width="552" /></p>
 <p>This data visualization shows that the one data point we singled out earlier on the far left of the plot has the label of “not applicable” instead of “democrat” or “republican”.
 Let’s use filter to look at the row that contains the “not applicable” value in the party column:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="index.html#cb32-1"></a>missing_party &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">==</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
-<span id="cb32-2"><a href="index.html#cb32-2"></a>missing_party</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="introduction-to-data-science.html#cb32-1"></a>missing_party &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">==</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
+<span id="cb32-2"><a href="introduction-to-data-science.html#cb32-2"></a>missing_party</span></code></pre></div>
 <pre><code>## # A tibble: 0 x 6
 ## # … with 6 variables: state &lt;chr&gt;, med_income &lt;dbl&gt;, med_prop_val &lt;dbl&gt;,
 ## #   population &lt;dbl&gt;, mean_commute_minutes &lt;dbl&gt;, party &lt;fct&gt;</code></pre>
 <p>That explains it! That row in the dataset is actually not a US state, but rather the US territory of Peurto Rico. Similar to other US territories, residents of Puerto Rico
 cannot vote in presidential elections. Hence the “not applicable” label. Let’s remove this row from the data frame and rename the data frame <code>vote_data</code>.
 To do this, we use the opposite of the equivalency operator (<code>==</code>) for our filter statement, the not equivalent operator (<code>!=</code>).</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="index.html#cb34-1"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
-<span id="cb34-2"><a href="index.html#cb34-2"></a>vote_data</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="introduction-to-data-science.html#cb34-1"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
+<span id="cb34-2"><a href="introduction-to-data-science.html#cb34-2"></a>vote_data</span></code></pre></div>
 <pre><code>## # A tibble: 51 x 6
 ##    state med_income med_prop_val population mean_commute_minutes party     
 ##    &lt;chr&gt;      &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;                &lt;dbl&gt; &lt;fct&gt;     
@@ -728,10 +728,10 @@ To do this, we use the opposite of the equivalency operator (<code>==</code>) fo
 ## # … with 41 more rows</code></pre>
 <p>Now we see that the data frame has 51 rows corresponding to the 50 states and the District of Columbia - all regions where residents can vote in US presidential elections.
 Let’s now recreate the scatter plot we made above using this data frame subset:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="index.html#cb36-1"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
-<span id="cb36-2"><a href="index.html#cb36-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb36-3"><a href="index.html#cb36-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb36-4"><a href="index.html#cb36-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introduction-to-data-science.html#cb36-1"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
+<span id="cb36-2"><a href="introduction-to-data-science.html#cb36-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb36-3"><a href="introduction-to-data-science.html#cb36-3"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb36-4"><a href="introduction-to-data-science.html#cb36-4"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/scatter_colour_by_party_no_PR-1.png" width="552" /></p>
 <p>What do we see when considering the second part of our exploratory question? Do we see a pattern in how certain states voted in the 2016 Presidential election? We do!
 Most of the US States who voted for the Republican candidate in the 2016 US Presidential election had lower median household income and lower median property values (data points primarily
@@ -743,22 +743,22 @@ and questions (like the ones at the beginning of this paragraph). Answering thos
 see more of later in this course.</p>
 </div>
 <div id="putting-it-all-together" class="section level3">
-<h3><span class="header-section-number">1.6.5</span> Putting it all together</h3>
+<h3><span class="header-section-number">5.6.5</span> Putting it all together</h3>
 <p>Below, we put everything from this chapter together in one code chunk. This demonstrates the power of R: in relatively few lines of code, we are able to create an entire data science workflow.</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="index.html#cb37-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb37-2"><a href="index.html#cb37-2"></a></span>
-<span id="cb37-3"><a href="index.html#cb37-3"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span>
-<span id="cb37-4"><a href="index.html#cb37-4"></a></span>
-<span id="cb37-5"><a href="index.html#cb37-5"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
-<span id="cb37-6"><a href="index.html#cb37-6"></a></span>
-<span id="cb37-7"><a href="index.html#cb37-7"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
-<span id="cb37-8"><a href="index.html#cb37-8"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb37-9"><a href="index.html#cb37-9"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
-<span id="cb37-10"><a href="index.html#cb37-10"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introduction-to-data-science.html#cb37-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb37-2"><a href="introduction-to-data-science.html#cb37-2"></a></span>
+<span id="cb37-3"><a href="introduction-to-data-science.html#cb37-3"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span>
+<span id="cb37-4"><a href="introduction-to-data-science.html#cb37-4"></a></span>
+<span id="cb37-5"><a href="introduction-to-data-science.html#cb37-5"></a>vote_data &lt;-<span class="st"> </span><span class="kw">filter</span>(us_data, party <span class="op">!=</span><span class="st"> &quot;Not Applicable&quot;</span>)</span>
+<span id="cb37-6"><a href="introduction-to-data-science.html#cb37-6"></a></span>
+<span id="cb37-7"><a href="introduction-to-data-science.html#cb37-7"></a><span class="kw">ggplot</span>(vote_data, <span class="kw">aes</span>(<span class="dt">x =</span> med_income, <span class="dt">y =</span> med_prop_val, <span class="dt">color =</span> party)) <span class="op">+</span></span>
+<span id="cb37-8"><a href="introduction-to-data-science.html#cb37-8"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb37-9"><a href="introduction-to-data-science.html#cb37-9"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Income (USD)&quot;</span>) <span class="op">+</span></span>
+<span id="cb37-10"><a href="introduction-to-data-science.html#cb37-10"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Median property value (USD)&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/nachos_to_cheesecake-1.png" width="552" /></p>
 </div>
 <div id="whats-next" class="section level3">
-<h3><span class="header-section-number">1.6.6</span> What’s next?</h3>
+<h3><span class="header-section-number">5.6.6</span> What’s next?</h3>
 <p>In the next chapter, we will dig in and spend more time learning how to load spreadsheet-like datasets of various formats into R, as well as how to scrape data from the web!</p>
 
 </div>
@@ -769,8 +769,8 @@ see more of later in this course.</p>
           </div>
         </div>
       </div>
+<a href="viz.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="reading.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -801,8 +801,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/test_thebelab.Rmd",
+"text": "Edit"
 },
 "history": {
 "link": null,
@@ -812,7 +812,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf", "_main.epub"],
 "toc": {
 "collapse": "subsection"
 }
