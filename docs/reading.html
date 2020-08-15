@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Reading in data locally and from the web | Introduction to Data Science</title>
+  <title>Chapter 2 Reading in data locally and from the web | Introduction to Data Science</title>
   <meta name="description" content="This is an open source textbook for teaching introductory data science." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Reading in data locally and from the web | Introduction to Data Science" />
+  <meta property="og:title" content="Chapter 2 Reading in data locally and from the web | Introduction to Data Science" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Reading in data locally and from the web | Introduction to Data Science" />
+  <meta name="twitter:title" content="Chapter 2 Reading in data locally and from the web | Introduction to Data Science" />
   
   <meta name="twitter:description" content="This is an open source textbook for teaching introductory data science." />
   
@@ -33,7 +33,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="making-r-source-code-chunk-interactive-inside-html-document.html"/>
+<link rel="prev" href="index.html"/>
 <link rel="next" href="wrangling.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -140,90 +140,88 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>1.1</b> Chapter learning objectives</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#jupyter-notebooks"><i class="fa fa-check"></i><b>1.2</b> Jupyter notebooks</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#loading-a-spreadsheet-like-dataset"><i class="fa fa-check"></i><b>1.3</b> Loading a spreadsheet-like dataset</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assigning-value-to-a-data-frame"><i class="fa fa-check"></i><b>1.4</b> Assigning value to a data frame</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#creating-subsets-of-data-frames-with-select-filter"><i class="fa fa-check"></i><b>1.5</b> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#using-select-to-extract-multiple-columns"><i class="fa fa-check"></i><b>1.5.1</b> Using <code>select</code> to extract multiple columns</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#using-select-to-extract-a-range-of-columns"><i class="fa fa-check"></i><b>1.5.2</b> Using <code>select</code> to extract a range of columns</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#using-filter-to-extract-a-single-row"><i class="fa fa-check"></i><b>1.5.3</b> Using <code>filter</code> to extract a single row</a></li>
+<li class="chapter" data-level="1.5.4" data-path="index.html"><a href="index.html#using-filter-to-extract-rows-with-values-above-a-threshold"><i class="fa fa-check"></i><b>1.5.4</b> Using <code>filter</code> to extract rows with values above a threshold</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html"><i class="fa fa-check"></i><b>2</b> Making R source code chunk interactive inside HTML document</a><ul>
-<li class="chapter" data-level="2.1" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#assigning-value-to-a-data-frame"><i class="fa fa-check"></i><b>2.1</b> Assigning value to a data frame</a></li>
-<li class="chapter" data-level="2.2" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#creating-subsets-of-data-frames-with-select-filter"><i class="fa fa-check"></i><b>2.2</b> Creating subsets of data frames with <code>select</code> &amp; <code>filter</code></a><ul>
-<li class="chapter" data-level="2.2.1" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#using-select-to-extract-multiple-columns"><i class="fa fa-check"></i><b>2.2.1</b> Using <code>select</code> to extract multiple columns</a></li>
-<li class="chapter" data-level="2.2.2" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#using-select-to-extract-a-range-of-columns"><i class="fa fa-check"></i><b>2.2.2</b> Using <code>select</code> to extract a range of columns</a></li>
-<li class="chapter" data-level="2.2.3" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#using-filter-to-extract-a-single-row"><i class="fa fa-check"></i><b>2.2.3</b> Using <code>filter</code> to extract a single row</a></li>
-<li class="chapter" data-level="2.2.4" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#using-filter-to-extract-rows-with-values-above-a-threshold"><i class="fa fa-check"></i><b>2.2.4</b> Using <code>filter</code> to extract rows with values above a threshold</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#exploring-data-with-visualizations"><i class="fa fa-check"></i><b>2.3</b> Exploring data with visualizations</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#using-ggplot-to-create-a-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="2.3.2" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#using-ggplot-to-create-a-scatter-plot-1"><i class="fa fa-check"></i><b>2.3.2</b> Using <code>ggplot</code> to create a scatter plot</a></li>
-<li class="chapter" data-level="2.3.3" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#formatting-ggplot-objects"><i class="fa fa-check"></i><b>2.3.3</b> Formatting ggplot objects</a></li>
-<li class="chapter" data-level="2.3.4" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#coloring-points-by-group"><i class="fa fa-check"></i><b>2.3.4</b> Coloring points by group</a></li>
-<li class="chapter" data-level="2.3.5" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#putting-it-all-together"><i class="fa fa-check"></i><b>2.3.5</b> Putting it all together</a></li>
-<li class="chapter" data-level="2.3.6" data-path="making-r-source-code-chunk-interactive-inside-html-document.html"><a href="making-r-source-code-chunk-interactive-inside-html-document.html#whats-next"><i class="fa fa-check"></i><b>2.3.6</b> What’s next?</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#exploring-data-with-visualizations"><i class="fa fa-check"></i><b>1.6</b> Exploring data with visualizations</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot"><i class="fa fa-check"></i><b>1.6.1</b> Using <code>ggplot</code> to create a scatter plot</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#using-ggplot-to-create-a-scatter-plot-1"><i class="fa fa-check"></i><b>1.6.2</b> Using <code>ggplot</code> to create a scatter plot</a></li>
+<li class="chapter" data-level="1.6.3" data-path="index.html"><a href="index.html#formatting-ggplot-objects"><i class="fa fa-check"></i><b>1.6.3</b> Formatting ggplot objects</a></li>
+<li class="chapter" data-level="1.6.4" data-path="index.html"><a href="index.html#coloring-points-by-group"><i class="fa fa-check"></i><b>1.6.4</b> Coloring points by group</a></li>
+<li class="chapter" data-level="1.6.5" data-path="index.html"><a href="index.html#putting-it-all-together"><i class="fa fa-check"></i><b>1.6.5</b> Putting it all together</a></li>
+<li class="chapter" data-level="1.6.6" data-path="index.html"><a href="index.html#whats-next"><i class="fa fa-check"></i><b>1.6.6</b> What’s next?</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="reading.html"><a href="reading.html"><i class="fa fa-check"></i><b>3</b> Reading in data locally and from the web</a><ul>
-<li class="chapter" data-level="3.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
-<li class="chapter" data-level="3.2" data-path="reading.html"><a href="reading.html#chapter-learning-objectives-1"><i class="fa fa-check"></i><b>3.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="3.3" data-path="reading.html"><a href="reading.html#absolute-and-relative-file-paths"><i class="fa fa-check"></i><b>3.3</b> Absolute and relative file paths</a></li>
-<li class="chapter" data-level="3.4" data-path="reading.html"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><i class="fa fa-check"></i><b>3.4</b> Reading tabular data from a plain text file into R</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="reading.html"><a href="reading.html#skipping-rows-when-reading-in-data"><i class="fa fa-check"></i><b>3.4.1</b> Skipping rows when reading in data</a></li>
-<li class="chapter" data-level="3.4.2" data-path="reading.html"><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><i class="fa fa-check"></i><b>3.4.2</b> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
-<li class="chapter" data-level="3.4.3" data-path="reading.html"><a href="reading.html#reading-tabular-data-directly-from-a-url"><i class="fa fa-check"></i><b>3.4.3</b> Reading tabular data directly from a URL</a></li>
-<li class="chapter" data-level="3.4.4" data-path="reading.html"><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><i class="fa fa-check"></i><b>3.4.4</b> Previewing a data file before reading it into R</a></li>
+<li class="chapter" data-level="2" data-path="reading.html"><a href="reading.html"><i class="fa fa-check"></i><b>2</b> Reading in data locally and from the web</a><ul>
+<li class="chapter" data-level="2.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="reading.html"><a href="reading.html#chapter-learning-objectives-1"><i class="fa fa-check"></i><b>2.2</b> Chapter learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="reading.html"><a href="reading.html#absolute-and-relative-file-paths"><i class="fa fa-check"></i><b>2.3</b> Absolute and relative file paths</a></li>
+<li class="chapter" data-level="2.4" data-path="reading.html"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><i class="fa fa-check"></i><b>2.4</b> Reading tabular data from a plain text file into R</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="reading.html"><a href="reading.html#skipping-rows-when-reading-in-data"><i class="fa fa-check"></i><b>2.4.1</b> Skipping rows when reading in data</a></li>
+<li class="chapter" data-level="2.4.2" data-path="reading.html"><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><i class="fa fa-check"></i><b>2.4.2</b> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
+<li class="chapter" data-level="2.4.3" data-path="reading.html"><a href="reading.html#reading-tabular-data-directly-from-a-url"><i class="fa fa-check"></i><b>2.4.3</b> Reading tabular data directly from a URL</a></li>
+<li class="chapter" data-level="2.4.4" data-path="reading.html"><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><i class="fa fa-check"></i><b>2.4.4</b> Previewing a data file before reading it into R</a></li>
 </ul></li>
-<li class="chapter" data-level="3.5" data-path="reading.html"><a href="reading.html#reading-data-from-an-microsoft-excel-file"><i class="fa fa-check"></i><b>3.5</b> Reading data from an Microsoft Excel file</a></li>
-<li class="chapter" data-level="3.6" data-path="reading.html"><a href="reading.html#reading-data-from-a-database"><i class="fa fa-check"></i><b>3.6</b> Reading data from a database</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="reading.html"><a href="reading.html#reading-data-from-a-sqlite-database"><i class="fa fa-check"></i><b>3.6.1</b> Reading data from a SQLite database</a></li>
-<li class="chapter" data-level="3.6.2" data-path="reading.html"><a href="reading.html#reading-data-from-a-postgresql-database"><i class="fa fa-check"></i><b>3.6.2</b> Reading data from a PostgreSQL database</a></li>
+<li class="chapter" data-level="2.5" data-path="reading.html"><a href="reading.html#reading-data-from-an-microsoft-excel-file"><i class="fa fa-check"></i><b>2.5</b> Reading data from an Microsoft Excel file</a></li>
+<li class="chapter" data-level="2.6" data-path="reading.html"><a href="reading.html#reading-data-from-a-database"><i class="fa fa-check"></i><b>2.6</b> Reading data from a database</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="reading.html"><a href="reading.html#reading-data-from-a-sqlite-database"><i class="fa fa-check"></i><b>2.6.1</b> Reading data from a SQLite database</a></li>
+<li class="chapter" data-level="2.6.2" data-path="reading.html"><a href="reading.html#reading-data-from-a-postgresql-database"><i class="fa fa-check"></i><b>2.6.2</b> Reading data from a PostgreSQL database</a></li>
 </ul></li>
-<li class="chapter" data-level="3.7" data-path="reading.html"><a href="reading.html#writing-data-from-r-to-a-.csv-file"><i class="fa fa-check"></i><b>3.7</b> Writing data from R to a <code>.csv</code> file</a></li>
-<li class="chapter" data-level="3.8" data-path="reading.html"><a href="reading.html#scraping-data-off-the-web-using-r"><i class="fa fa-check"></i><b>3.8</b> Scraping data off the web using R</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="reading.html"><a href="reading.html#html-and-css-selectors"><i class="fa fa-check"></i><b>3.8.1</b> HTML and CSS selectors</a></li>
-<li class="chapter" data-level="3.8.2" data-path="reading.html"><a href="reading.html#are-you-allowed-to-scrape-that-website"><i class="fa fa-check"></i><b>3.8.2</b> Are you allowed to scrape that website?</a></li>
-<li class="chapter" data-level="3.8.3" data-path="reading.html"><a href="reading.html#using-rvest"><i class="fa fa-check"></i><b>3.8.3</b> Using <code>rvest</code></a></li>
+<li class="chapter" data-level="2.7" data-path="reading.html"><a href="reading.html#writing-data-from-r-to-a-.csv-file"><i class="fa fa-check"></i><b>2.7</b> Writing data from R to a <code>.csv</code> file</a></li>
+<li class="chapter" data-level="2.8" data-path="reading.html"><a href="reading.html#scraping-data-off-the-web-using-r"><i class="fa fa-check"></i><b>2.8</b> Scraping data off the web using R</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="reading.html"><a href="reading.html#html-and-css-selectors"><i class="fa fa-check"></i><b>2.8.1</b> HTML and CSS selectors</a></li>
+<li class="chapter" data-level="2.8.2" data-path="reading.html"><a href="reading.html#are-you-allowed-to-scrape-that-website"><i class="fa fa-check"></i><b>2.8.2</b> Are you allowed to scrape that website?</a></li>
+<li class="chapter" data-level="2.8.3" data-path="reading.html"><a href="reading.html#using-rvest"><i class="fa fa-check"></i><b>2.8.3</b> Using <code>rvest</code></a></li>
 </ul></li>
-<li class="chapter" data-level="3.9" data-path="reading.html"><a href="reading.html#additional-readingsresources"><i class="fa fa-check"></i><b>3.9</b> Additional readings/resources</a></li>
+<li class="chapter" data-level="2.9" data-path="reading.html"><a href="reading.html#additional-readingsresources"><i class="fa fa-check"></i><b>2.9</b> Additional readings/resources</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="wrangling.html"><a href="wrangling.html"><i class="fa fa-check"></i><b>4</b> Cleaning and wrangling data</a><ul>
-<li class="chapter" data-level="4.1" data-path="wrangling.html"><a href="wrangling.html#overview-1"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
-<li class="chapter" data-level="4.2" data-path="wrangling.html"><a href="wrangling.html#chapter-learning-objectives-2"><i class="fa fa-check"></i><b>4.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="4.3" data-path="wrangling.html"><a href="wrangling.html#vectors-and-data-frames"><i class="fa fa-check"></i><b>4.3</b> Vectors and Data frames</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="wrangling.html"><a href="wrangling.html#what-is-a-data-frame"><i class="fa fa-check"></i><b>4.3.1</b> What is a data frame?</a></li>
-<li class="chapter" data-level="4.3.2" data-path="wrangling.html"><a href="wrangling.html#what-is-a-vector"><i class="fa fa-check"></i><b>4.3.2</b> What is a vector?</a></li>
-<li class="chapter" data-level="4.3.3" data-path="wrangling.html"><a href="wrangling.html#how-are-vectors-different-from-a-list"><i class="fa fa-check"></i><b>4.3.3</b> How are vectors different from a list?</a></li>
-<li class="chapter" data-level="4.3.4" data-path="wrangling.html"><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><i class="fa fa-check"></i><b>4.3.4</b> What does this have to do with data frames?</a></li>
+<li class="chapter" data-level="3" data-path="wrangling.html"><a href="wrangling.html"><i class="fa fa-check"></i><b>3</b> Cleaning and wrangling data</a><ul>
+<li class="chapter" data-level="3.1" data-path="wrangling.html"><a href="wrangling.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="wrangling.html"><a href="wrangling.html#chapter-learning-objectives-2"><i class="fa fa-check"></i><b>3.2</b> Chapter learning objectives</a></li>
+<li class="chapter" data-level="3.3" data-path="wrangling.html"><a href="wrangling.html#vectors-and-data-frames"><i class="fa fa-check"></i><b>3.3</b> Vectors and Data frames</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="wrangling.html"><a href="wrangling.html#what-is-a-data-frame"><i class="fa fa-check"></i><b>3.3.1</b> What is a data frame?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="wrangling.html"><a href="wrangling.html#what-is-a-vector"><i class="fa fa-check"></i><b>3.3.2</b> What is a vector?</a></li>
+<li class="chapter" data-level="3.3.3" data-path="wrangling.html"><a href="wrangling.html#how-are-vectors-different-from-a-list"><i class="fa fa-check"></i><b>3.3.3</b> How are vectors different from a list?</a></li>
+<li class="chapter" data-level="3.3.4" data-path="wrangling.html"><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><i class="fa fa-check"></i><b>3.3.4</b> What does this have to do with data frames?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="wrangling.html"><a href="wrangling.html#tidy-data"><i class="fa fa-check"></i><b>4.4</b> Tidy Data</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="wrangling.html"><a href="wrangling.html#what-is-tidy-data"><i class="fa fa-check"></i><b>4.4.1</b> What is tidy data?</a></li>
-<li class="chapter" data-level="4.4.2" data-path="wrangling.html"><a href="wrangling.html#why-is-tidy-data-important-in-r"><i class="fa fa-check"></i><b>4.4.2</b> Why is tidy data important in R?</a></li>
-<li class="chapter" data-level="4.4.3" data-path="wrangling.html"><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><i class="fa fa-check"></i><b>4.4.3</b> Going from wide to long (or tidy!) using <code>gather</code></a></li>
-<li class="chapter" data-level="4.4.4" data-path="wrangling.html"><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><i class="fa fa-check"></i><b>4.4.4</b> Using separate to deal with multiple delimiters</a></li>
-<li class="chapter" data-level="4.4.5" data-path="wrangling.html"><a href="wrangling.html#notes-on-defining-tidy-data"><i class="fa fa-check"></i><b>4.4.5</b> Notes on defining tidy data</a></li>
+<li class="chapter" data-level="3.4" data-path="wrangling.html"><a href="wrangling.html#tidy-data"><i class="fa fa-check"></i><b>3.4</b> Tidy Data</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="wrangling.html"><a href="wrangling.html#what-is-tidy-data"><i class="fa fa-check"></i><b>3.4.1</b> What is tidy data?</a></li>
+<li class="chapter" data-level="3.4.2" data-path="wrangling.html"><a href="wrangling.html#why-is-tidy-data-important-in-r"><i class="fa fa-check"></i><b>3.4.2</b> Why is tidy data important in R?</a></li>
+<li class="chapter" data-level="3.4.3" data-path="wrangling.html"><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><i class="fa fa-check"></i><b>3.4.3</b> Going from wide to long (or tidy!) using <code>gather</code></a></li>
+<li class="chapter" data-level="3.4.4" data-path="wrangling.html"><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><i class="fa fa-check"></i><b>3.4.4</b> Using separate to deal with multiple delimiters</a></li>
+<li class="chapter" data-level="3.4.5" data-path="wrangling.html"><a href="wrangling.html#notes-on-defining-tidy-data"><i class="fa fa-check"></i><b>3.4.5</b> Notes on defining tidy data</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="wrangling.html"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><i class="fa fa-check"></i><b>4.5</b> Combining functions using the pipe operator, <code>%&gt;%</code>:</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="wrangling.html"><a href="wrangling.html#using-to-combine-filter-and-select"><i class="fa fa-check"></i><b>4.5.1</b> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
-<li class="chapter" data-level="4.5.2" data-path="wrangling.html"><a href="wrangling.html#using-with-more-than-two-functions"><i class="fa fa-check"></i><b>4.5.2</b> Using <code>%&gt;%</code> with more than two functions</a></li>
+<li class="chapter" data-level="3.5" data-path="wrangling.html"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><i class="fa fa-check"></i><b>3.5</b> Combining functions using the pipe operator, <code>%&gt;%</code>:</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="wrangling.html"><a href="wrangling.html#using-to-combine-filter-and-select"><i class="fa fa-check"></i><b>3.5.1</b> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
+<li class="chapter" data-level="3.5.2" data-path="wrangling.html"><a href="wrangling.html#using-with-more-than-two-functions"><i class="fa fa-check"></i><b>3.5.2</b> Using <code>%&gt;%</code> with more than two functions</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="wrangling.html"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><i class="fa fa-check"></i><b>4.6</b> Iterating over data with <code>group_by</code> + <code>summarize</code></a><ul>
-<li class="chapter" data-level="4.6.1" data-path="wrangling.html"><a href="wrangling.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>4.6.1</b> Calculating summary statistics:</a></li>
-<li class="chapter" data-level="4.6.2" data-path="wrangling.html"><a href="wrangling.html#calculating-group-summary-statistics"><i class="fa fa-check"></i><b>4.6.2</b> Calculating group summary statistics:</a></li>
+<li class="chapter" data-level="3.6" data-path="wrangling.html"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><i class="fa fa-check"></i><b>3.6</b> Iterating over data with <code>group_by</code> + <code>summarize</code></a><ul>
+<li class="chapter" data-level="3.6.1" data-path="wrangling.html"><a href="wrangling.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>3.6.1</b> Calculating summary statistics:</a></li>
+<li class="chapter" data-level="3.6.2" data-path="wrangling.html"><a href="wrangling.html#calculating-group-summary-statistics"><i class="fa fa-check"></i><b>3.6.2</b> Calculating group summary statistics:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="wrangling.html"><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><i class="fa fa-check"></i><b>4.7</b> Additional reading on the <code>dplyr</code> functions</a></li>
-<li class="chapter" data-level="4.8" data-path="wrangling.html"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><i class="fa fa-check"></i><b>4.8</b> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a><ul>
-<li class="chapter" data-level="4.8.1" data-path="wrangling.html"><a href="wrangling.html#a-bit-more-about-the-map_-functions"><i class="fa fa-check"></i><b>4.8.1</b> A bit more about the <code>map_*</code> functions</a></li>
+<li class="chapter" data-level="3.7" data-path="wrangling.html"><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><i class="fa fa-check"></i><b>3.7</b> Additional reading on the <code>dplyr</code> functions</a></li>
+<li class="chapter" data-level="3.8" data-path="wrangling.html"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><i class="fa fa-check"></i><b>3.8</b> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="wrangling.html"><a href="wrangling.html#a-bit-more-about-the-map_-functions"><i class="fa fa-check"></i><b>3.8.1</b> A bit more about the <code>map_*</code> functions</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="wrangling.html"><a href="wrangling.html#additional-readingsresources-1"><i class="fa fa-check"></i><b>4.9</b> Additional readings/resources</a></li>
+<li class="chapter" data-level="3.9" data-path="wrangling.html"><a href="wrangling.html#additional-readingsresources-1"><i class="fa fa-check"></i><b>3.9</b> Additional readings/resources</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="viz.html"><a href="viz.html"><i class="fa fa-check"></i><b>5</b> Effective data visualization</a><ul>
-<li class="chapter" data-level="5.1" data-path="viz.html"><a href="viz.html#overview-2"><i class="fa fa-check"></i><b>5.1</b> Overview</a></li>
-<li class="chapter" data-level="5.2" data-path="viz.html"><a href="viz.html#chapter-learning-objectives-3"><i class="fa fa-check"></i><b>5.2</b> Chapter learning objectives</a></li>
-<li class="chapter" data-level="5.3" data-path="viz.html"><a href="viz.html#choosing-the-visualization"><i class="fa fa-check"></i><b>5.3</b> Choosing the visualization</a></li>
-<li class="chapter" data-level="5.4" data-path="viz.html"><a href="viz.html#refining-the-visualization"><i class="fa fa-check"></i><b>5.4</b> Refining the visualization</a></li>
-<li class="chapter" data-level="5.5" data-path="viz.html"><a href="viz.html#creating-visualizations-with-ggplot2"><i class="fa fa-check"></i><b>5.5</b> Creating visualizations with <code>ggplot2</code></a><ul>
-<li class="chapter" data-level="5.5.1" data-path="viz.html"><a href="viz.html#the-mauna-loa-co2-data-set"><i class="fa fa-check"></i><b>5.5.1</b> The Mauna Loa CO2 data set</a></li>
-<li class="chapter" data-level="5.5.2" data-path="viz.html"><a href="viz.html#the-island-landmass-data-set"><i class="fa fa-check"></i><b>5.5.2</b> The island landmass data set</a></li>
-<li class="chapter" data-level="5.5.3" data-path="viz.html"><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><i class="fa fa-check"></i><b>5.5.3</b> The Old Faithful eruption / waiting time data set</a></li>
-<li class="chapter" data-level="5.5.4" data-path="viz.html"><a href="viz.html#the-michelson-speed-of-light-data-set"><i class="fa fa-check"></i><b>5.5.4</b> The Michelson speed of light data set</a></li>
+<li class="chapter" data-level="4" data-path="viz.html"><a href="viz.html"><i class="fa fa-check"></i><b>4</b> Effective data visualization</a><ul>
+<li class="chapter" data-level="4.1" data-path="viz.html"><a href="viz.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="viz.html"><a href="viz.html#chapter-learning-objectives-3"><i class="fa fa-check"></i><b>4.2</b> Chapter learning objectives</a></li>
+<li class="chapter" data-level="4.3" data-path="viz.html"><a href="viz.html#choosing-the-visualization"><i class="fa fa-check"></i><b>4.3</b> Choosing the visualization</a></li>
+<li class="chapter" data-level="4.4" data-path="viz.html"><a href="viz.html#refining-the-visualization"><i class="fa fa-check"></i><b>4.4</b> Refining the visualization</a></li>
+<li class="chapter" data-level="4.5" data-path="viz.html"><a href="viz.html#creating-visualizations-with-ggplot2"><i class="fa fa-check"></i><b>4.5</b> Creating visualizations with <code>ggplot2</code></a><ul>
+<li class="chapter" data-level="4.5.1" data-path="viz.html"><a href="viz.html#the-mauna-loa-co2-data-set"><i class="fa fa-check"></i><b>4.5.1</b> The Mauna Loa CO2 data set</a></li>
+<li class="chapter" data-level="4.5.2" data-path="viz.html"><a href="viz.html#the-island-landmass-data-set"><i class="fa fa-check"></i><b>4.5.2</b> The island landmass data set</a></li>
+<li class="chapter" data-level="4.5.3" data-path="viz.html"><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><i class="fa fa-check"></i><b>4.5.3</b> The Old Faithful eruption / waiting time data set</a></li>
+<li class="chapter" data-level="4.5.4" data-path="viz.html"><a href="viz.html#the-michelson-speed-of-light-data-set"><i class="fa fa-check"></i><b>4.5.4</b> The Michelson speed of light data set</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="viz.html"><a href="viz.html#explaining-the-visualization"><i class="fa fa-check"></i><b>5.6</b> Explaining the visualization</a></li>
-<li class="chapter" data-level="5.7" data-path="viz.html"><a href="viz.html#saving-the-visualization"><i class="fa fa-check"></i><b>5.7</b> Saving the visualization</a></li>
+<li class="chapter" data-level="4.6" data-path="viz.html"><a href="viz.html#explaining-the-visualization"><i class="fa fa-check"></i><b>4.6</b> Explaining the visualization</a></li>
+<li class="chapter" data-level="4.7" data-path="viz.html"><a href="viz.html#saving-the-visualization"><i class="fa fa-check"></i><b>4.7</b> Saving the visualization</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -246,9 +244,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="reading" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Reading in data locally and from the web</h1>
+<h1><span class="header-section-number">Chapter 2</span> Reading in data locally and from the web</h1>
 <div id="overview" class="section level2">
-<h2><span class="header-section-number">3.1</span> Overview</h2>
+<h2><span class="header-section-number">2.1</span> Overview</h2>
 <p>In this chapter, you’ll learn to read spreadsheet-like data of various formats into R from your local device and from the web.
 “Reading” (or “loading”) is the process of converting data (stored as plain text, a database, HTML, etc.) into an object (e.g., a dataframe)
 that R can easily access and manipulate, and is thus the gateway to any data analysis; you won’t be able to analyze
@@ -258,7 +256,7 @@ you will have to spend less time re-formatting, cleaning and wrangling your data
 It’s like making sure your shoelaces are tied well before going for a run so that you don’t trip later on!</p>
 </div>
 <div id="chapter-learning-objectives-1" class="section level2">
-<h2><span class="header-section-number">3.2</span> Chapter learning objectives</h2>
+<h2><span class="header-section-number">2.2</span> Chapter learning objectives</h2>
 <p>By the end of the chapter, students will be able to:</p>
 <ul>
 <li><p>define the following:</p>
@@ -297,7 +295,7 @@ It’s like making sure your shoelaces are tied well before going for a run so t
 </ul>
 </div>
 <div id="absolute-and-relative-file-paths" class="section level2">
-<h2><span class="header-section-number">3.3</span> Absolute and relative file paths</h2>
+<h2><span class="header-section-number">2.3</span> Absolute and relative file paths</h2>
 <p>When you load a data set into R, you first need to tell R where that files lives. The file could live on your
 computer (<em>local</em>), or somewhere on the internet (<em>remote</em>). In this section we will discuss the case where the file lives on your computer.</p>
 <p>The place where the file lives on your computer is called the “path”. You can think of the path as directions to the file. There are two kinds of
@@ -331,7 +329,7 @@ on each computer) and where the files and folders happen to be located on that p
 <p><em>Source: <a href="https://www.udacity.com/course/linux-command-line-basics--ud595">Udacity course “Linux Command Line Basics”</a></em></p>
 </div>
 <div id="reading-tabular-data-from-a-plain-text-file-into-r" class="section level2">
-<h2><span class="header-section-number">3.4</span> Reading tabular data from a plain text file into R</h2>
+<h2><span class="header-section-number">2.4</span> Reading tabular data from a plain text file into R</h2>
 <p>Now we will learn more about reading tabular data from a plain text file into R, as well as how to write tabular data to a file.
 Last chapter we learned about using the <code>tidyverse</code> <code>read_csv</code> function when reading files that match that functions expected defaults
 (column names are present and commas are used as the delimiter/separator between columns). In this section, we will learn how to read
@@ -370,7 +368,7 @@ DE,54976,228500,926454,24.45553333,Democrat</code></pre>
 ## 10 FL         43355       125600   19645772                 24.8 Republican
 ## # … with 42 more rows</code></pre>
 <div id="skipping-rows-when-reading-in-data" class="section level3">
-<h3><span class="header-section-number">3.4.1</span> Skipping rows when reading in data</h3>
+<h3><span class="header-section-number">2.4.1</span> Skipping rows when reading in data</h3>
 <p>Often times information about how data was collected, or other relevant information, is included at the top of the data file. This information is usually written in sentence and paragraph form, with no delimiter because it is not organized into columns. An example of this is shown below:</p>
 <pre><code>Data source: https://datausa.io/
 Record of how data was collected: https://github.com/UBC-DSCI/introduction-to-datascience/blob/master/data/src/retrieve_data_usa.ipynb
@@ -434,7 +432,7 @@ DE,54976,228500,926454,24.45553333,Democrat</code></pre>
 ## # … with 42 more rows</code></pre>
 </div>
 <div id="read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r" class="section level3">
-<h3><span class="header-section-number">3.4.2</span> <code>read_delim</code> as a more flexible method to get tabular data into R</h3>
+<h3><span class="header-section-number">2.4.2</span> <code>read_delim</code> as a more flexible method to get tabular data into R</h3>
 <p>When our tabular data comes in a different format, we can use the <code>read_delim</code> function instead. For example, a different version of this same dataset has no column names and uses tabs as the delimiter instead of commas.</p>
 <p>Here is how the file would look in a plain text editor:</p>
 <pre><code>AK  64222   197300  733375  10.46830207 Republican
@@ -476,7 +474,7 @@ FL  43355   125600  19645772    24.78055522 Republican</code></pre>
 <p>Data frames in R need to have column names, thus if you read data into R as a data frame without column names then R assigns column names for them. If you used the <code>read_*</code> functions to read the data into R, then R gives each column a name of X1, X2, …, XN, where N is the number of columns in the data set.</p>
 </div>
 <div id="reading-tabular-data-directly-from-a-url" class="section level3">
-<h3><span class="header-section-number">3.4.3</span> Reading tabular data directly from a URL</h3>
+<h3><span class="header-section-number">2.4.3</span> Reading tabular data directly from a URL</h3>
 <p>We can also use <code>read_csv()</code> or <code>read_delim()</code> (and related functions) to read in tabular data directly from a url that contains tabular data. In this case, we provide the url to <code>read_csv()</code> as the path to the file instead of a path to a local file on our computer. Similar to when we specify a path on our local computer, here we need to surround the url by quotes. All other arguments that we use are the same as when using these functions with a local file on our computer.</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="reading.html#cb53-1"></a>us_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Parsed with column specification:
@@ -505,7 +503,7 @@ FL  43355   125600  19645772    24.78055522 Republican</code></pre>
 ## # … with 42 more rows</code></pre>
 </div>
 <div id="previewing-a-data-file-before-reading-it-into-r" class="section level3">
-<h3><span class="header-section-number">3.4.4</span> Previewing a data file before reading it into R</h3>
+<h3><span class="header-section-number">2.4.4</span> Previewing a data file before reading it into R</h3>
 <p>In all the examples above, we gave you previews of the data file before we read it into R. This is essential so that you can see whether or not there are column names, what the
 delimiters are, and if there are lines you need to skip. You should do this yourself when trying to read in data files. In Jupyter, you preview data as a plain text file by clicking
 on the file’s name in the Jupyter home menu. We demonstrate this in the video below:</p>
@@ -514,7 +512,7 @@ on the file’s name in the Jupyter home menu. We demonstrate this in the video 
 </div>
 </div>
 <div id="reading-data-from-an-microsoft-excel-file" class="section level2">
-<h2><span class="header-section-number">3.5</span> Reading data from an Microsoft Excel file</h2>
+<h2><span class="header-section-number">2.5</span> Reading data from an Microsoft Excel file</h2>
 <p>There are many other ways to store tabular datasets beyond plain text files, and similarly many ways to load those datasets into R. For example, it is very common to encounter,
 and need to load into R, data stored as a Microsoft Excel spreadsheet (with the filename extension <code>.xlsx</code>).
 To be able to do this, a key thing to know is that even though <code>.csv</code> and <code>.xlsx</code> files look almost
@@ -575,7 +573,7 @@ specifically for this purpose.</p>
 <p>As with plain text files, you should always try to explore the data file before importing it into R. This helps you decide which arguments you need to use to successfully load the data into R. If you do not have the Excel program on your computer, there are other free programs you can use to preview the file. Examples include Google Sheets and Libre Office.</p>
 </div>
 <div id="reading-data-from-a-database" class="section level2">
-<h2><span class="header-section-number">3.6</span> Reading data from a database</h2>
+<h2><span class="header-section-number">2.6</span> Reading data from a database</h2>
 <p>Another very common form of data storage to be read into R for the purpose of data analysis is the relational database. There are many relational database management systems, such as
 SQLite, MySQL, PosgreSQL, Oracle, and many more. Almost all employ SQL (<em>structured query language</em>) to pull data from the database. Thankfully, you don’t need to know SQL
 to analyze data from a database;
@@ -583,7 +581,7 @@ several packages have been written
 that allow R to connect to relational databases and use the R programming language as the front end (what the user types in) to pull data from them. In this book we will
 give examples of how to do this using R with SQLite and PostgreSQL databases.</p>
 <div id="reading-data-from-a-sqlite-database" class="section level3">
-<h3><span class="header-section-number">3.6.1</span> Reading data from a SQLite database</h3>
+<h3><span class="header-section-number">2.6.1</span> Reading data from a SQLite database</h3>
 <p>SQLite is probably the simplest relational database that one can use in combination with R. SQLite databases are self-contained and usually stored and accessed locally on one computer. Data is usually stored in a file with a <code>.db</code> extension. Similar to Excel files, these are not plain text files and cannot be read in a plain text editor.</p>
 <p>The first thing you need to do to read data into R from a database is to connect to the database. We do that using the <code>dbConnect</code> function from the <code>DBI</code> (database interface) package. This does not read in the data, but simply tells R where the database is and opens up a communication channel.</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="reading.html#cb60-1"></a><span class="kw">library</span>(DBI)</span>
@@ -665,7 +663,7 @@ not work to extract columns or single values from the reference given by the <co
 reference object, it is advisable to then bring it into your local machine’s memory using <code>collect</code> as a data frame.</p>
 </div>
 <div id="reading-data-from-a-postgresql-database" class="section level3">
-<h3><span class="header-section-number">3.6.2</span> Reading data from a PostgreSQL database</h3>
+<h3><span class="header-section-number">2.6.2</span> Reading data from a PostgreSQL database</h3>
 <p>PostgreSQL (also called Postgres) is a very popular free and open-source option for relational database software. Unlike SQLite, PostgreSQL uses
 a client–server database engine, as it was designed to be used and accessed on a network. This means that you have to provide more
 information to R when connecting to Postgres databases. The additional information that you need to include when you call the <code>dbConnect</code>
@@ -735,7 +733,7 @@ min(avg_rating_data)</code></pre>
 </div>
 </div>
 <div id="writing-data-from-r-to-a-.csv-file" class="section level2">
-<h2><span class="header-section-number">3.7</span> Writing data from R to a <code>.csv</code> file</h2>
+<h2><span class="header-section-number">2.7</span> Writing data from R to a <code>.csv</code> file</h2>
 <p>At the middle and end of a data analysis, we often want to write a data frame that has changed (either through filtering, selecting, mutating or summarizing) to a file
 so that we can share it with others or use it for another step in the analysis. The most straightforward way to do this is to use the <code>write_csv</code> function from the <code>tidyverse</code> library.
 The default arguments for this file are to use a comma (<code>,</code>) as the delimiter and include column names. Below we demonstrate creating a new version of the US state-level
@@ -744,11 +742,11 @@ property, income, population and voting data from 2015 and 2016 that does not co
 <span id="cb84-2"><a href="reading.html#cb84-2"></a><span class="kw">write_csv</span>(state_data, <span class="st">&quot;data/us_states_only.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="scraping-data-off-the-web-using-r" class="section level2">
-<h2><span class="header-section-number">3.8</span> Scraping data off the web using R</h2>
+<h2><span class="header-section-number">2.8</span> Scraping data off the web using R</h2>
 <p>In the first part of this chapter we learned how to read in data from plain text files that are usually “rectangular” in shape using the tidyverse <code>read_*</code> functions. Sadly, not all data comes in this simple format, but happily there are many other tools we can use to read in more messy/wild data formats. One common place people often want/need to read in data from is websites. Such data exists in an a non-rectangular format. One quick and easy solution to get this data is to copy and paste it, however this becomes painstakingly long and boring when there is a lot of data that needs gathering, and anytime you start doing a lot of copying and pasting it is very likely you will introduce errors.</p>
 <p>The formal name for gathering non-rectangular data from the web and transforming it into a more useful format for data analysis is <strong>web scraping</strong>. There are two different ways to do web scraping: 1) screen scraping (similar to copying and pasting from a website, but done in a programmatic way to minimize errors and maximize efficiency) and 2) web APIs (<strong>a</strong>pplication <strong>p</strong>rogramming <strong>i</strong>nterface) (a website that provides a programatic way of returning the data as JSON or XML files via http requests). In this course we will explore the first method, screen scraping using R’s <a href="https://github.com/hadley/rvest"><code>rvest</code> package</a>.</p>
 <div id="html-and-css-selectors" class="section level3">
-<h3><span class="header-section-number">3.8.1</span> HTML and CSS selectors</h3>
+<h3><span class="header-section-number">2.8.1</span> HTML and CSS selectors</h3>
 <p>Before we jump into scraping, let’s set up some motivation and learn a little bit about what the “source code” of a website looks like. Say we are interested in knowing the average rental price (per square footage) of the most recently available 1 bedroom apartments in Vancouver from <a href="https://vancouver.craigslist.org" class="uri">https://vancouver.craigslist.org</a>. When we visit the Vancouver Craigslist website and search for 1 bedroom apartments, this is what we are shown:</p>
 <p><img src="img/craigslist_human.png" /></p>
 <p>From that page, it’s pretty easy for our human eyes to find the apartment price and square footage. But how can we do this programmatically so we don’t have to copy and paste all these numbers? Well, we have to deal with the webpage source code, which we show a snippet of below (and link to the <a href="img/website_source.txt">entire source code here</a>):</p>
@@ -806,7 +804,7 @@ property, income, population and voting data from 2015 and 2016 that does not co
 <p>From installing and using the selectorgadget as shown in the video above, we get the two CSS selectors <code>.housing</code> and <code>.result-price</code> that we can use to scrape information about the square footage and the rental price, respectively. The selector gadget returns them to us as a comma separated list (here <code>.housing , .result-price</code>), which is exactly the format we need to provide to R if we are using more than one CSS selector.</p>
 </div>
 <div id="are-you-allowed-to-scrape-that-website" class="section level3">
-<h3><span class="header-section-number">3.8.2</span> Are you allowed to scrape that website?</h3>
+<h3><span class="header-section-number">2.8.2</span> Are you allowed to scrape that website?</h3>
 <p><strong>BEFORE</strong> scraping data from the web, you should always check whether or not you are <strong>ALLOWED</strong> to scrape it! There are two documents that are important for this: the robots.txt file and reading the website’s Terms of Service document. The website’s Terms of Service document is probably the more important of the two, and so you should look there first. What happens when we look at Craigslist’s Terms of Service document? Well we read this:</p>
 <p><em>“You agree not to copy/collect CL content via robots, spiders, scripts, scrapers, crawlers, or any automated or manual equivalent (e.g., by hand).”</em></p>
 <p>source: <a href="https://www.craigslist.org/about/terms.of.use" class="uri">https://www.craigslist.org/about/terms.of.use</a></p>
@@ -818,7 +816,7 @@ property, income, population and voting data from 2015 and 2016 that does not co
 </iframe>
 </div>
 <div id="using-rvest" class="section level3">
-<h3><span class="header-section-number">3.8.3</span> Using <code>rvest</code></h3>
+<h3><span class="header-section-number">2.8.3</span> Using <code>rvest</code></h3>
 <p>Now that we have our CSS selectors we can use <code>rvest</code> R package to scrape our desired data from the website. First we start by loading the <code>rvest</code> package:</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="reading.html#cb88-1"></a><span class="kw">library</span>(rvest)</span></code></pre></div>
 <blockquote>
@@ -846,7 +844,7 @@ property, income, population and voting data from 2015 and 2016 that does not co
 </div>
 </div>
 <div id="additional-readingsresources" class="section level2">
-<h2><span class="header-section-number">3.9</span> Additional readings/resources</h2>
+<h2><span class="header-section-number">2.9</span> Additional readings/resources</h2>
 <ul>
 <li><a href="https://r4ds.had.co.nz/data-import.html">Data import chapter</a> from <a href="https://r4ds.had.co.nz/">R for Data Science</a> by Garrett Grolemund &amp; Hadley Wickham</li>
 </ul>
@@ -858,7 +856,7 @@ property, income, population and voting data from 2015 and 2016 that does not co
           </div>
         </div>
       </div>
-<a href="making-r-source-code-chunk-interactive-inside-html-document.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="wrangling.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

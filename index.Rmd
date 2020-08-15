@@ -52,7 +52,6 @@ output:
 
 ```{r setup, include=FALSE}
 library(forcats)
-library(learnr)
 ```
 
 # Introduction to Data Science
@@ -127,12 +126,6 @@ For example, a `.csv` file named `state_property_vote.csv` [is included with the
 This file--- originally from [Data USA](https://datausa.io/)---has US state-level property, income, population and voting data from 2015 and 2016. 
 If we were to open this data in a plain text editor, we would see each row on its own line, and each entry in the table separated by a comma:
 
-# Making R source code chunk interactive inside HTML document
-
-Here we add a button to activate interactivity in chunks. By clicking on this
-button, it will make the chunks interactive and it will launch an R kernel to
-execute some code from these interactive chunks.
-
 ```{bash, echo=FALSE, comment=NA}
 head -n 10 state_property_vote.csv
 ```
@@ -177,8 +170,8 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ```
 
 ```{r attr.source = c('data-executable="true"', 'data-language="r"')}
-us_data <- read_csv("https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv")
-write_csv(us_data, "state_property_vote.csv")
+us_data <- readr::read_csv("https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv")
+readr::write_csv(us_data, "state_property_vote.csv")
 ```
 
 ```{r attr.source = c('data-executable="true"', 'data-language="r"')}
