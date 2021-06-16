@@ -84,7 +84,7 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ```
 
 ```{r attr.source = c('data-executable="true"', 'data-language="r"')}
-us_data <- readr::read_csv("https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv")
+us_data <- readr::read_csv("https://raw.githubusercontent.com/SamGuay/introduction-to-datascience/master/state_property_vote.csv")
 readr::write_csv(us_data, "state_property_vote.csv")
 ```
 

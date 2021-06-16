@@ -2,11 +2,44 @@
 <html lang="" xml:lang="">
 <head>
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Chapter 5 Introduction to Data Science | Introduction to Data Science" />
-<meta property="og:type" content="book" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Introduction to Data Science | test_thebelab</title>
+  <meta name="description" content="Chapter 5 Introduction to Data Science | test_thebelab" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Introduction to Data Science | test_thebelab" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Introduction to Data Science | test_thebelab" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="viz.html"/>
+
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -15,35 +48,22 @@
 
 
 
-<meta name="description" content="Chapter 5 Introduction to Data Science | Introduction to Data Science">
 
-<title>Chapter 5 Introduction to Data Science | Introduction to Data Science</title>
-
-<script src="libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="libs/navigation-1.1/tabsets.js"></script>
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -63,7 +83,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -95,122 +115,144 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 
 
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-</style>
 </head>
 
 <body>
 
-<div class="container-fluid main-container">
 
 
-<div class="row">
-<div class="col-sm-12">
-<div id="TOC">
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data Science</a>
 <ul>
-<li class="has-sub"><a href="index.html#introduction-to-data-science"><span class="toc-section-number">1</span> Introduction to Data Science</a><ul>
-<li><a href="index.html#loading-a-spreadsheet-like-dataset"><span class="toc-section-number">1.1</span> Loading a spreadsheet-like dataset</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#loading-a-spreadsheet-like-dataset"><i class="fa fa-check"></i><b>1.1</b> Loading a spreadsheet-like dataset</a></li>
 </ul></li>
-<li class="has-sub"><a href="reading.html#reading"><span class="toc-section-number">2</span> Reading in data locally and from the web</a><ul>
-<li><a href="reading.html#overview"><span class="toc-section-number">2.1</span> Overview</a></li>
-<li><a href="reading.html#chapter-learning-objectives"><span class="toc-section-number">2.2</span> Chapter learning objectives</a></li>
-<li><a href="reading.html#absolute-and-relative-file-paths"><span class="toc-section-number">2.3</span> Absolute and relative file paths</a></li>
-<li class="has-sub"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><span class="toc-section-number">2.4</span> Reading tabular data from a plain text file into R</a><ul>
-<li><a href="reading.html#skipping-rows-when-reading-in-data"><span class="toc-section-number">2.4.1</span> Skipping rows when reading in data</a></li>
-<li><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><span class="toc-section-number">2.4.2</span> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
-<li><a href="reading.html#reading-tabular-data-directly-from-a-url"><span class="toc-section-number">2.4.3</span> Reading tabular data directly from a URL</a></li>
-<li><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><span class="toc-section-number">2.4.4</span> Previewing a data file before reading it into R</a></li>
+<li class="chapter" data-level="2" data-path="reading.html"><a href="reading.html"><i class="fa fa-check"></i><b>2</b> Reading in data locally and from the web</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="reading.html"><a href="reading.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="reading.html"><a href="reading.html#chapter-learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Chapter learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="reading.html"><a href="reading.html#absolute-and-relative-file-paths"><i class="fa fa-check"></i><b>2.3</b> Absolute and relative file paths</a></li>
+<li class="chapter" data-level="2.4" data-path="reading.html"><a href="reading.html#reading-tabular-data-from-a-plain-text-file-into-r"><i class="fa fa-check"></i><b>2.4</b> Reading tabular data from a plain text file into R</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="reading.html"><a href="reading.html#skipping-rows-when-reading-in-data"><i class="fa fa-check"></i><b>2.4.1</b> Skipping rows when reading in data</a></li>
+<li class="chapter" data-level="2.4.2" data-path="reading.html"><a href="reading.html#read_delim-as-a-more-flexible-method-to-get-tabular-data-into-r"><i class="fa fa-check"></i><b>2.4.2</b> <code>read_delim</code> as a more flexible method to get tabular data into R</a></li>
+<li class="chapter" data-level="2.4.3" data-path="reading.html"><a href="reading.html#reading-tabular-data-directly-from-a-url"><i class="fa fa-check"></i><b>2.4.3</b> Reading tabular data directly from a URL</a></li>
+<li class="chapter" data-level="2.4.4" data-path="reading.html"><a href="reading.html#previewing-a-data-file-before-reading-it-into-r"><i class="fa fa-check"></i><b>2.4.4</b> Previewing a data file before reading it into R</a></li>
 </ul></li>
-<li><a href="reading.html#reading-data-from-an-microsoft-excel-file"><span class="toc-section-number">2.5</span> Reading data from an Microsoft Excel file</a></li>
-<li class="has-sub"><a href="reading.html#reading-data-from-a-database"><span class="toc-section-number">2.6</span> Reading data from a database</a><ul>
-<li><a href="reading.html#reading-data-from-a-sqlite-database"><span class="toc-section-number">2.6.1</span> Reading data from a SQLite database</a></li>
-<li><a href="reading.html#reading-data-from-a-postgresql-database"><span class="toc-section-number">2.6.2</span> Reading data from a PostgreSQL database</a></li>
+<li class="chapter" data-level="2.5" data-path="reading.html"><a href="reading.html#reading-data-from-an-microsoft-excel-file"><i class="fa fa-check"></i><b>2.5</b> Reading data from an Microsoft Excel file</a></li>
+<li class="chapter" data-level="2.6" data-path="reading.html"><a href="reading.html#reading-data-from-a-database"><i class="fa fa-check"></i><b>2.6</b> Reading data from a database</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="reading.html"><a href="reading.html#reading-data-from-a-sqlite-database"><i class="fa fa-check"></i><b>2.6.1</b> Reading data from a SQLite database</a></li>
+<li class="chapter" data-level="2.6.2" data-path="reading.html"><a href="reading.html#reading-data-from-a-postgresql-database"><i class="fa fa-check"></i><b>2.6.2</b> Reading data from a PostgreSQL database</a></li>
 </ul></li>
-<li><a href="reading.html#writing-data-from-r-to-a-.csv-file"><span class="toc-section-number">2.7</span> Writing data from R to a <code>.csv</code> file</a></li>
-<li class="has-sub"><a href="reading.html#scraping-data-off-the-web-using-r"><span class="toc-section-number">2.8</span> Scraping data off the web using R</a><ul>
-<li><a href="reading.html#html-and-css-selectors"><span class="toc-section-number">2.8.1</span> HTML and CSS selectors</a></li>
-<li><a href="reading.html#are-you-allowed-to-scrape-that-website"><span class="toc-section-number">2.8.2</span> Are you allowed to scrape that website?</a></li>
-<li><a href="reading.html#using-rvest"><span class="toc-section-number">2.8.3</span> Using <code>rvest</code></a></li>
+<li class="chapter" data-level="2.7" data-path="reading.html"><a href="reading.html#writing-data-from-r-to-a-.csv-file"><i class="fa fa-check"></i><b>2.7</b> Writing data from R to a <code>.csv</code> file</a></li>
+<li class="chapter" data-level="2.8" data-path="reading.html"><a href="reading.html#scraping-data-off-the-web-using-r"><i class="fa fa-check"></i><b>2.8</b> Scraping data off the web using R</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="reading.html"><a href="reading.html#html-and-css-selectors"><i class="fa fa-check"></i><b>2.8.1</b> HTML and CSS selectors</a></li>
+<li class="chapter" data-level="2.8.2" data-path="reading.html"><a href="reading.html#are-you-allowed-to-scrape-that-website"><i class="fa fa-check"></i><b>2.8.2</b> Are you allowed to scrape that website?</a></li>
+<li class="chapter" data-level="2.8.3" data-path="reading.html"><a href="reading.html#using-rvest"><i class="fa fa-check"></i><b>2.8.3</b> Using <code>rvest</code></a></li>
 </ul></li>
-<li><a href="reading.html#additional-readingsresources"><span class="toc-section-number">2.9</span> Additional readings/resources</a></li>
+<li class="chapter" data-level="2.9" data-path="reading.html"><a href="reading.html#additional-readingsresources"><i class="fa fa-check"></i><b>2.9</b> Additional readings/resources</a></li>
 </ul></li>
-<li class="has-sub"><a href="wrangling.html#wrangling"><span class="toc-section-number">3</span> Cleaning and wrangling data</a><ul>
-<li><a href="wrangling.html#overview-1"><span class="toc-section-number">3.1</span> Overview</a></li>
-<li><a href="wrangling.html#chapter-learning-objectives-1"><span class="toc-section-number">3.2</span> Chapter learning objectives</a></li>
-<li class="has-sub"><a href="wrangling.html#vectors-and-data-frames"><span class="toc-section-number">3.3</span> Vectors and Data frames</a><ul>
-<li><a href="wrangling.html#what-is-a-data-frame"><span class="toc-section-number">3.3.1</span> What is a data frame?</a></li>
-<li><a href="wrangling.html#what-is-a-vector"><span class="toc-section-number">3.3.2</span> What is a vector?</a></li>
-<li><a href="wrangling.html#how-are-vectors-different-from-a-list"><span class="toc-section-number">3.3.3</span> How are vectors different from a list?</a></li>
-<li><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><span class="toc-section-number">3.3.4</span> What does this have to do with data frames?</a></li>
+<li class="chapter" data-level="3" data-path="wrangling.html"><a href="wrangling.html"><i class="fa fa-check"></i><b>3</b> Cleaning and wrangling data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="wrangling.html"><a href="wrangling.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="wrangling.html"><a href="wrangling.html#chapter-learning-objectives-1"><i class="fa fa-check"></i><b>3.2</b> Chapter learning objectives</a></li>
+<li class="chapter" data-level="3.3" data-path="wrangling.html"><a href="wrangling.html#vectors-and-data-frames"><i class="fa fa-check"></i><b>3.3</b> Vectors and Data frames</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="wrangling.html"><a href="wrangling.html#what-is-a-data-frame"><i class="fa fa-check"></i><b>3.3.1</b> What is a data frame?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="wrangling.html"><a href="wrangling.html#what-is-a-vector"><i class="fa fa-check"></i><b>3.3.2</b> What is a vector?</a></li>
+<li class="chapter" data-level="3.3.3" data-path="wrangling.html"><a href="wrangling.html#how-are-vectors-different-from-a-list"><i class="fa fa-check"></i><b>3.3.3</b> How are vectors different from a list?</a></li>
+<li class="chapter" data-level="3.3.4" data-path="wrangling.html"><a href="wrangling.html#what-does-this-have-to-do-with-data-frames"><i class="fa fa-check"></i><b>3.3.4</b> What does this have to do with data frames?</a></li>
 </ul></li>
-<li class="has-sub"><a href="wrangling.html#tidy-data"><span class="toc-section-number">3.4</span> Tidy Data</a><ul>
-<li><a href="wrangling.html#what-is-tidy-data"><span class="toc-section-number">3.4.1</span> What is tidy data?</a></li>
-<li><a href="wrangling.html#why-is-tidy-data-important-in-r"><span class="toc-section-number">3.4.2</span> Why is tidy data important in R?</a></li>
-<li><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><span class="toc-section-number">3.4.3</span> Going from wide to long (or tidy!) using <code>gather</code></a></li>
-<li><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><span class="toc-section-number">3.4.4</span> Using separate to deal with multiple delimiters</a></li>
-<li><a href="wrangling.html#notes-on-defining-tidy-data"><span class="toc-section-number">3.4.5</span> Notes on defining tidy data</a></li>
+<li class="chapter" data-level="3.4" data-path="wrangling.html"><a href="wrangling.html#tidy-data"><i class="fa fa-check"></i><b>3.4</b> Tidy Data</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="wrangling.html"><a href="wrangling.html#what-is-tidy-data"><i class="fa fa-check"></i><b>3.4.1</b> What is tidy data?</a></li>
+<li class="chapter" data-level="3.4.2" data-path="wrangling.html"><a href="wrangling.html#why-is-tidy-data-important-in-r"><i class="fa fa-check"></i><b>3.4.2</b> Why is tidy data important in R?</a></li>
+<li class="chapter" data-level="3.4.3" data-path="wrangling.html"><a href="wrangling.html#going-from-wide-to-long-or-tidy-using-gather"><i class="fa fa-check"></i><b>3.4.3</b> Going from wide to long (or tidy!) using <code>gather</code></a></li>
+<li class="chapter" data-level="3.4.4" data-path="wrangling.html"><a href="wrangling.html#using-separate-to-deal-with-multiple-delimiters"><i class="fa fa-check"></i><b>3.4.4</b> Using separate to deal with multiple delimiters</a></li>
+<li class="chapter" data-level="3.4.5" data-path="wrangling.html"><a href="wrangling.html#notes-on-defining-tidy-data"><i class="fa fa-check"></i><b>3.4.5</b> Notes on defining tidy data</a></li>
 </ul></li>
-<li class="has-sub"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><span class="toc-section-number">3.5</span> Combining functions using the pipe operator, <code>%&gt;%</code>:</a><ul>
-<li><a href="wrangling.html#using-to-combine-filter-and-select"><span class="toc-section-number">3.5.1</span> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
-<li><a href="wrangling.html#using-with-more-than-two-functions"><span class="toc-section-number">3.5.2</span> Using <code>%&gt;%</code> with more than two functions</a></li>
+<li class="chapter" data-level="3.5" data-path="wrangling.html"><a href="wrangling.html#combining-functions-using-the-pipe-operator"><i class="fa fa-check"></i><b>3.5</b> Combining functions using the pipe operator, <code>%&gt;%</code>:</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="wrangling.html"><a href="wrangling.html#using-to-combine-filter-and-select"><i class="fa fa-check"></i><b>3.5.1</b> Using <code>%&gt;%</code> to combine <code>filter</code> and <code>select</code></a></li>
+<li class="chapter" data-level="3.5.2" data-path="wrangling.html"><a href="wrangling.html#using-with-more-than-two-functions"><i class="fa fa-check"></i><b>3.5.2</b> Using <code>%&gt;%</code> with more than two functions</a></li>
 </ul></li>
-<li class="has-sub"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><span class="toc-section-number">3.6</span> Iterating over data with <code>group_by</code> + <code>summarize</code></a><ul>
-<li><a href="wrangling.html#calculating-summary-statistics"><span class="toc-section-number">3.6.1</span> Calculating summary statistics:</a></li>
-<li><a href="wrangling.html#calculating-group-summary-statistics"><span class="toc-section-number">3.6.2</span> Calculating group summary statistics:</a></li>
+<li class="chapter" data-level="3.6" data-path="wrangling.html"><a href="wrangling.html#iterating-over-data-with-group_by-summarize"><i class="fa fa-check"></i><b>3.6</b> Iterating over data with <code>group_by</code> + <code>summarize</code></a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="wrangling.html"><a href="wrangling.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>3.6.1</b> Calculating summary statistics:</a></li>
+<li class="chapter" data-level="3.6.2" data-path="wrangling.html"><a href="wrangling.html#calculating-group-summary-statistics"><i class="fa fa-check"></i><b>3.6.2</b> Calculating group summary statistics:</a></li>
 </ul></li>
-<li><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><span class="toc-section-number">3.7</span> Additional reading on the <code>dplyr</code> functions</a></li>
-<li class="has-sub"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><span class="toc-section-number">3.8</span> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a><ul>
-<li><a href="wrangling.html#a-bit-more-about-the-map_-functions"><span class="toc-section-number">3.8.1</span> A bit more about the <code>map_*</code> functions</a></li>
+<li class="chapter" data-level="3.7" data-path="wrangling.html"><a href="wrangling.html#additional-reading-on-the-dplyr-functions"><i class="fa fa-check"></i><b>3.7</b> Additional reading on the <code>dplyr</code> functions</a></li>
+<li class="chapter" data-level="3.8" data-path="wrangling.html"><a href="wrangling.html#using-purrrs-map-functions-to-iterate"><i class="fa fa-check"></i><b>3.8</b> Using <code>purrr</code>’s <code>map*</code> functions to iterate</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="wrangling.html"><a href="wrangling.html#a-bit-more-about-the-map_-functions"><i class="fa fa-check"></i><b>3.8.1</b> A bit more about the <code>map_*</code> functions</a></li>
 </ul></li>
-<li><a href="wrangling.html#additional-readingsresources-1"><span class="toc-section-number">3.9</span> Additional readings/resources</a></li>
+<li class="chapter" data-level="3.9" data-path="wrangling.html"><a href="wrangling.html#additional-readingsresources-1"><i class="fa fa-check"></i><b>3.9</b> Additional readings/resources</a></li>
 </ul></li>
-<li class="has-sub"><a href="viz.html#viz"><span class="toc-section-number">4</span> Effective data visualization</a><ul>
-<li><a href="viz.html#overview-2"><span class="toc-section-number">4.1</span> Overview</a></li>
-<li><a href="viz.html#chapter-learning-objectives-2"><span class="toc-section-number">4.2</span> Chapter learning objectives</a></li>
-<li><a href="viz.html#choosing-the-visualization"><span class="toc-section-number">4.3</span> Choosing the visualization</a></li>
-<li><a href="viz.html#refining-the-visualization"><span class="toc-section-number">4.4</span> Refining the visualization</a></li>
-<li class="has-sub"><a href="viz.html#creating-visualizations-with-ggplot2"><span class="toc-section-number">4.5</span> Creating visualizations with <code>ggplot2</code></a><ul>
-<li><a href="viz.html#the-mauna-loa-co2-data-set"><span class="toc-section-number">4.5.1</span> The Mauna Loa CO2 data set</a></li>
-<li><a href="viz.html#the-island-landmass-data-set"><span class="toc-section-number">4.5.2</span> The island landmass data set</a></li>
-<li><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><span class="toc-section-number">4.5.3</span> The Old Faithful eruption / waiting time data set</a></li>
-<li><a href="viz.html#the-michelson-speed-of-light-data-set"><span class="toc-section-number">4.5.4</span> The Michelson speed of light data set</a></li>
+<li class="chapter" data-level="4" data-path="viz.html"><a href="viz.html"><i class="fa fa-check"></i><b>4</b> Effective data visualization</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="viz.html"><a href="viz.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="viz.html"><a href="viz.html#chapter-learning-objectives-2"><i class="fa fa-check"></i><b>4.2</b> Chapter learning objectives</a></li>
+<li class="chapter" data-level="4.3" data-path="viz.html"><a href="viz.html#choosing-the-visualization"><i class="fa fa-check"></i><b>4.3</b> Choosing the visualization</a></li>
+<li class="chapter" data-level="4.4" data-path="viz.html"><a href="viz.html#refining-the-visualization"><i class="fa fa-check"></i><b>4.4</b> Refining the visualization</a></li>
+<li class="chapter" data-level="4.5" data-path="viz.html"><a href="viz.html#creating-visualizations-with-ggplot2"><i class="fa fa-check"></i><b>4.5</b> Creating visualizations with <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="viz.html"><a href="viz.html#the-mauna-loa-co2-data-set"><i class="fa fa-check"></i><b>4.5.1</b> The Mauna Loa CO2 data set</a></li>
+<li class="chapter" data-level="4.5.2" data-path="viz.html"><a href="viz.html#the-island-landmass-data-set"><i class="fa fa-check"></i><b>4.5.2</b> The island landmass data set</a></li>
+<li class="chapter" data-level="4.5.3" data-path="viz.html"><a href="viz.html#the-old-faithful-eruption-waiting-time-data-set"><i class="fa fa-check"></i><b>4.5.3</b> The Old Faithful eruption / waiting time data set</a></li>
+<li class="chapter" data-level="4.5.4" data-path="viz.html"><a href="viz.html#the-michelson-speed-of-light-data-set"><i class="fa fa-check"></i><b>4.5.4</b> The Michelson speed of light data set</a></li>
 </ul></li>
-<li><a href="viz.html#explaining-the-visualization"><span class="toc-section-number">4.6</span> Explaining the visualization</a></li>
-<li><a href="viz.html#saving-the-visualization"><span class="toc-section-number">4.7</span> Saving the visualization</a></li>
+<li class="chapter" data-level="4.6" data-path="viz.html"><a href="viz.html#explaining-the-visualization"><i class="fa fa-check"></i><b>4.6</b> Explaining the visualization</a></li>
+<li class="chapter" data-level="4.7" data-path="viz.html"><a href="viz.html#saving-the-visualization"><i class="fa fa-check"></i><b>4.7</b> Saving the visualization</a></li>
 </ul></li>
-<li class="has-sub"><a href="introduction-to-data-science-1.html#introduction-to-data-science-1"><span class="toc-section-number">5</span> Introduction to Data Science</a><ul>
-<li><a href="introduction-to-data-science-1.html#loading-a-spreadsheet-like-dataset-1"><span class="toc-section-number">5.1</span> Loading a spreadsheet-like dataset</a></li>
+<li class="chapter" data-level="5" data-path="introduction-to-data-science-1.html"><a href="introduction-to-data-science-1.html"><i class="fa fa-check"></i><b>5</b> Introduction to Data Science</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="introduction-to-data-science-1.html"><a href="introduction-to-data-science-1.html#loading-a-spreadsheet-like-dataset-1"><i class="fa fa-check"></i><b>5.1</b> Loading a spreadsheet-like dataset</a></li>
 </ul></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
-<div id="introduction-to-data-science-1" class="section level1">
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test_thebelab</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!-- Some stuff from thebelab required for the magic -->
+  <!-- Configure and load Thebe !-->
+  <script type="text/x-thebe-config">
+    {
+      requestKernel: true,
+      binderOptions: {
+        repo: "binder-examples/r",
+      },
+      kernelOptions: {
+        name: "R",
+        kernelName: "ir",
+      },
+    }
+  </script>
+    
+  <!-- script for thebelab -->
+  <script src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+<div id="introduction-to-data-science-1" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Introduction to Data Science</h1>
-<div id="loading-a-spreadsheet-like-dataset-1" class="section level2">
+<div id="loading-a-spreadsheet-like-dataset-1" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Loading a spreadsheet-like dataset</h2>
 <p>Often, the first thing we need to do in data analysis is to load a dataset into R. When we bring spreadsheet-like (think Microsoft Excel tables) data, generally shaped like a rectangle, into R it is represented as what we call a <em>data frame</em> object. It is very similar to a spreadsheet where the rows are the collected observations and the columns are the variables.</p>
 <p><img src="img/spreadsheet_vs_dataframe.PNG" width="850"/></p>
@@ -250,7 +292,7 @@ appropriate. For example, files that use spaces or tabs to separate the columns,
 <p>clicking the below button will make this book interactive and that could take some
 times to strat. Be patient…</p>
 </blockquote>
-<button id="activateButton" style="width: 100px; height: 50px; font-size: 1em;">Activate</button>
+<p><button id="activateButton" style="width: 100px; height: 50px; font-size: 1em;">Activate</button></p>
 <script type="text/javascript">
 // thebelab js script
 var bootstrapThebe = function() {
@@ -258,8 +300,9 @@ var bootstrapThebe = function() {
 }
 document.querySelector("#activateButton").addEventListener('click', bootstrapThebe)
 </script>
-<div class="sourceCode" id="cb135" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="introduction-to-data-science-1.html#cb135-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Parsed with column specification:
+<div class="sourceCode" id="cb133" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="introduction-to-data-science-1.html#cb133-1"></a>us_data &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/SamGuay/introduction-to-datascience/master/state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+## ── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────
 ## cols(
 ##   state = col_character(),
 ##   med_income = col_double(),
@@ -268,10 +311,11 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ##   mean_commute_minutes = col_double(),
 ##   party = col_character()
 ## )</code></pre>
-<div class="sourceCode" id="cb137" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="introduction-to-data-science-1.html#cb137-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb138" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="introduction-to-data-science-1.html#cb138-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb138-2"><a href="introduction-to-data-science-1.html#cb138-2"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Parsed with column specification:
+<div class="sourceCode" id="cb135" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="introduction-to-data-science-1.html#cb135-1"></a>readr<span class="op">::</span><span class="kw">write_csv</span>(us_data, <span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb136" data-executable="true" data-language="r"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="introduction-to-data-science-1.html#cb136-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb136-2"><a href="introduction-to-data-science-1.html#cb136-2"></a><span class="kw">read_csv</span>(<span class="st">&quot;state_property_vote.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+## ── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────
 ## cols(
 ##   state = col_character(),
 ##   med_income = col_double(),
@@ -304,23 +348,62 @@ This has several benefits that we’ll discuss in further detail later in the co
 
 </div>
 </div>
-<p style="text-align: center;">
-<a href="viz.html"><button class="btn btn-default">Previous</button></a>
-</p>
-</div>
-</div>
+            </section>
 
+          </div>
+        </div>
+      </div>
+<a href="viz.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-</div>
-
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
-
-// add bootstrap table styles to pandoc tables
-$(document).ready(function () {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
 });
-
+});
 </script>
 
 </body>
+
 </html>

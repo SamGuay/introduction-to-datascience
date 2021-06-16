@@ -3,25 +3,14 @@ title: "Introduction to Data Science"
 output:
   bookdown::html_book:
     split_by: chapter
+    includes:
+      before_body: magic-js.html
+  bookdown::gitbook:
+    includes:
+      before_body: magic-js.html
 ---
 
-<!-- Some stuff from thebelab required for the magic -->
-<!-- Configure and load Thebe !-->
-<script type="text/x-thebe-config">
-  {
-    requestKernel: true,
-    binderOptions: {
-      repo: "binder-examples/r",
-    },
-    kernelOptions: {
-      name: "R",
-      kernelName: "ir",
-    },
-  }
-</script>
 
-<!-- script for thebelab -->
-<script src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
 
 ```{r setup, include=FALSE}
 library(forcats)
@@ -86,7 +75,7 @@ document.querySelector("#activateButton").addEventListener('click', bootstrapThe
 ```
 
 ```{r attr.source = c('data-executable="true"', 'data-language="r"')}
-us_data <- readr::read_csv("https://raw.githubusercontent.com/UBC-DSCI/introduction-to-datascience/master/state_property_vote.csv")
+us_data <- readr::read_csv("https://raw.githubusercontent.com/SamGuay/introduction-to-datascience/master/state_property_vote.csv")
 readr::write_csv(us_data, "state_property_vote.csv")
 ```
 
